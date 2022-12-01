@@ -1,21 +1,21 @@
 
 public class Status {
 	
-	public int hp,mp,nivel;
+	public int hp,mp,level;
 		
-	public void ataque() {
-		
-	}
-	
-	public void ataqueUlt() {
+	public void attack() {
 		
 	}
 	
-	public void ataqueEfeito() {
+	public void attackUlt() {
 		
 	}
 	
-	public void passaNivel() {
+	public void attackEffect() {
+		
+	}
+	
+	public void levelUp() {
 		
 	}
 	
