@@ -17,4 +17,6 @@ public class Enemies extends Being{
 	}
 	
 	
+	
+	
 }

@@ -1,7 +1,7 @@
 
 public class Encounter {
 
-	public static int counter = 0;
+	public static int counter = 1;
 	private static int rando;
 	private static Being inimigo;
 	

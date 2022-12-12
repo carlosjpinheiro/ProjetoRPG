@@ -4,12 +4,16 @@ public class Character1 extends Characters{
 
 	public Character1() {
 		super();
-		this.setHp(10);
+		this.setHpMax(100);
+		this.setHp(100);
+		this.setMpMax(70);
+		this.setMp(70); 
 		this.setExp(0); 
 		this.setLevel(1);
-		this.setMp(10); 
-		this.setHpPotion(2);
-		this.setName("Bob, no mundo da fantasia");
+		this.setHpPotions(2);
+		this.setMpPotions(1);
+		this.setGold(0);
+		this.setName("Guerreiro");
 	}
 	
 	

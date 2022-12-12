@@ -1,7 +1,5 @@
 
 public class Characters extends Being{
-
-	public int exp, hpPotion;
 	
 	@Override
 	public void attack(Being vitima) {
@@ -10,6 +8,7 @@ public class Characters extends Being{
 			System.out.println("Acerto crítico!!");
 		}
 		else vitima.setHp(vitima.getHp() - this.getLevel());
+		if (vitima.getHp() < 0) vitima.setHp(0); 
 		
 	}
 	
@@ -31,13 +30,13 @@ public class Characters extends Being{
 		this.exp = exp;
 	}
 
-	public int getHpPotion() {
-		return hpPotion;
-	}
-
-	public void setHpPotion(int hpPotion) {
-		this.hpPotion = hpPotion;
-	}
+//	public int getHpPotion() {
+//		return hpPotion;
+//	}
+//
+//	public void setHpPotion(int hpPotion) {
+//		this.hpPotion = hpPotion;
+//	}
 	
 	
 }
