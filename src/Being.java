@@ -1,52 +1,40 @@
 
 public abstract class Being {
 	
-	private int hp,mp,level;
-	private String name;
+	public int HP,MP,Nivel;
+	public String nome;
 		
-	public abstract void attack(Being vitima);
-	
-	public abstract void attackUlt(Being vitima) ;
-	
-	public abstract void attackEffect(Being vitima) ;
-	
-	public void levelUp() {
-		
+
+	public int getHP() {
+		return HP;
 	}
 
-	public int getHp() {
-		return hp;
+	public void setHP(int HP) {
+		this.HP = HP;
 	}
 
-	public void setHp(int hp) {
-		this.hp = hp;
+	public int getMP() {
+		return MP;
 	}
 
-	public int getMp() {
-		return mp;
+	public void setMP(int MP) {
+		this.MP = MP;
 	}
 
-	public void setMp(int mp) {
-		this.mp = mp;
+	public int getNivel() {
+		return Nivel;
 	}
 
-	public int getLevel() {
-		return level;
+	public void setNivel(int Nivel) {
+		this.Nivel = Nivel;
 	}
 
-	public void setLevel(int level) {
-		this.level = level;
+	public String getnome() {
+		return nome;
 	}
 
-	public String getName() {
-		return name;
+	public void setnome(String nome) {
+		this.nome = nome;
 	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	
-	
 	
 }

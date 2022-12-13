@@ -1,13 +1,19 @@
 
 public class Enemy1 extends Enemies{
 
-	public Enemy1() {
+	public Enemy1(){
 		super();
-		this.setHp(10);
-		this.setLevel(1);
-		this.setMp(10); 
-		this.setName("Bandido");
+		this.setHP(50);
+		this.setNivel(1);
+		this.setMP(10); 
+		this.setnome("Bandido");
+		this.setAtaque(10);
+		this.setDefesa(3);
+		this.setNomeHabilidade1("Roubo de vida");
 	}
+
+	
+	
 	
 	
 }
