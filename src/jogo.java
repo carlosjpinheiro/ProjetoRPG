@@ -1,6 +1,3 @@
-
-
-
 import javax.swing.JOptionPane;
 
 
@@ -11,7 +8,7 @@ public class jogo extends javax.swing.JFrame {
     
     public void atacarAdversario(int habilidade){
         int dano = p.calculaDano(habilidade);
-        JOptionPane.showMessageDialog(null, "dano: "+dano);// pode tirar é somente para debug
+        JOptionPane.showMessageDialog(null, "dano: " + dano);// pode tirar é somente para debug
         //p.addXP(dano); adionar a quantidade de dano como xp?
         //inimigo.diminuiHP(dano) atribuir dano ao inimico (implementar)
         //inimigo.vivo

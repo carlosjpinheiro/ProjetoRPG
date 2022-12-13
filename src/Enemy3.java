@@ -10,5 +10,6 @@ public class Enemy3 extends Enemies{
 		this.setAtaque(8);
 		this.setDefesa(5);
 		this.setNomeHabilidade1("Corte profundo");
-	}
+
+}
 }

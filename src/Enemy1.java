@@ -12,8 +12,7 @@ public class Enemy1 extends Enemies{
 		this.setNomeHabilidade1("Roubo de vida");
 	}
 
-	
-	
+
 	
 	
 }

@@ -12,3 +12,4 @@ public class Enemy2 extends Enemies{
 		this.setNomeHabilidade1("Arremeço ao ar");
 	}
 }
+
