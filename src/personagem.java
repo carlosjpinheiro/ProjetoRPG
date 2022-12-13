@@ -1,6 +1,3 @@
-
-
-
 public class personagem {
     private int HPMaximo;
     private int HP;

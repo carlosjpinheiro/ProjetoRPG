@@ -1,23 +1,19 @@
-
-
-
-
-    public class arqueiro extends personagem {
-        public arqueiro(String nome) {
-            setNome(nome);
-            setHPMaximo(50);
-            setHP(50);
-            setMPMaximo(30);
-            setMP(30);
-            setAtaqueFisico(1);
-            setAtaqueMagico(8);
-            setDefesa(5);
-            setNivel(1);
-            setXP(0);
-            setPontosForca(4);
-            setPontosInteligencia(1);
-            setPontosDestreza(10);
-            setPontosNaoAplicados(0);
+public class arqueiro extends personagem {
+    public arqueiro(String nome) {
+        setNome(nome);
+        setHPMaximo(90);
+        setHP(90);
+        setMPMaximo(80);
+        setMP(80);
+        setAtaqueFisico(25);
+        setAtaqueMagico(10);
+        setDefesa(15);
+        setNivel(1);
+        setXP(0);
+        setPontosForca(4);
+        setPontosInteligencia(4);
+        setPontosDestreza(10);
+        setPontosNaoAplicados(0);
             
         setNomeHabilidade1("Disparo Critico");
         setConsumoManaHabilidade1(15);
@@ -26,6 +22,5 @@
         setConsumoManaHabilidade2(35);
         setTaxaDanoHabilidade2(2.5);  
         setPersonagemMagico(true);
-        }
-    
-    }
+   }
+}
