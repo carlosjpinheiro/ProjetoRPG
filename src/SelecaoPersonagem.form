@@ -56,7 +56,7 @@
     <Component class="javax.swing.JLabel" name="SelGuerreio">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\JoanaEnchendo\JoanaEnchendoRPG\IMG\50\guerreiro.png"/>
+          <Image iconType="3" name="/img/50/guerreiro.png"/>
         </Property>
       </Properties>
       <Events>
@@ -66,7 +66,7 @@
     <Component class="javax.swing.JLabel" name="SelAssasino">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\JoanaEnchendo\JoanaEnchendoRPG\IMG\50\Assasino.png"/>
+          <Image iconType="3" name="/img/50/Assasino.png"/>
         </Property>
       </Properties>
       <Events>
@@ -76,7 +76,7 @@
     <Component class="javax.swing.JLabel" name="SelArqueiro">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\JoanaEnchendo\JoanaEnchendoRPG\IMG\50\arqueiro.png"/>
+          <Image iconType="3" name="/img/50/arqueiro.png"/>
         </Property>
       </Properties>
       <Events>
@@ -86,7 +86,7 @@
     <Component class="javax.swing.JLabel" name="SelMago">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\JoanaEnchendo\JoanaEnchendoRPG\IMG\50\mago.png"/>
+          <Image iconType="3" name="/img/50/mago.png"/>
         </Property>
       </Properties>
       <Events>

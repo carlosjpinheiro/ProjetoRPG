@@ -167,7 +167,7 @@ public class jogo extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         DisplayForca.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        DisplayForca.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\ADD.png")); // NOI18N
+        DisplayForca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ADD.png"))); // NOI18N
         DisplayForca.setText("Força 10          ");
         DisplayForca.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         DisplayForca.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -176,26 +176,26 @@ public class jogo extends javax.swing.JFrame {
             }
         });
 
-        DisplayAtackFisico.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\str.png")); // NOI18N
+        DisplayAtackFisico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/str.png"))); // NOI18N
         DisplayAtackFisico.setText("100000");
 
-        DisplayDefasa.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\DEFESE.png")); // NOI18N
+        DisplayDefasa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/DEFESE.png"))); // NOI18N
         DisplayDefasa.setText("200000");
 
-        DisplayMP.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\MP.png")); // NOI18N
+        DisplayMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/MP.png"))); // NOI18N
         DisplayMP.setText(" 41/51");
 
-        DisplayAtackMagico.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\MAGICATACK.png")); // NOI18N
+        DisplayAtackMagico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/MAGICATACK.png"))); // NOI18N
         DisplayAtackMagico.setText("142");
 
         DisplayNickXP.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
-        DisplayNickXP.setText("JOANA GUERREIRA NIVEL 90 (273/5400)XP");
+        DisplayNickXP.setText("LUCAS GUERREIRO NIVEL 90 (273/5400)XP");
 
-        DisplayHP.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\HP.png")); // NOI18N
+        DisplayHP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/HP.png"))); // NOI18N
         DisplayHP.setText(" 0/100000");
 
         DisplayDestreza.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        DisplayDestreza.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\ADD.png")); // NOI18N
+        DisplayDestreza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ADD.png"))); // NOI18N
         DisplayDestreza.setText("Destreza 4        ");
         DisplayDestreza.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         DisplayDestreza.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -205,7 +205,7 @@ public class jogo extends javax.swing.JFrame {
         });
 
         DisplayInteligencia.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        DisplayInteligencia.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\ADD.png")); // NOI18N
+        DisplayInteligencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ADD.png"))); // NOI18N
         DisplayInteligencia.setText("Inteligencia 2  ");
         DisplayInteligencia.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         DisplayInteligencia.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -217,7 +217,7 @@ public class jogo extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
         jLabel10.setText("[######      ] 600/100HP");
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\ORC.png")); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ORC.png"))); // NOI18N
         jLabel11.setText("jLabel11");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
@@ -288,7 +288,7 @@ public class jogo extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Adicionar XP");
+        jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

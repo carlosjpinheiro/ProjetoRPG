@@ -29,28 +29,28 @@ public class SelecaoPersonagem extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Seleção de Classe");
 
-        SelGuerreio.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\50\\guerreiro.png")); // NOI18N
+        SelGuerreio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/50/guerreiro.png"))); // NOI18N
         SelGuerreio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SelGuerreioMouseClicked(evt);
             }
         });
 
-        SelAssasino.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\50\\Assasino.png")); // NOI18N
+        SelAssasino.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/50/Assasino.png"))); // NOI18N
         SelAssasino.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SelAssasinoMouseClicked(evt);
             }
         });
 
-        SelArqueiro.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\50\\arqueiro.png")); // NOI18N
+        SelArqueiro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/50/arqueiro.png"))); // NOI18N
         SelArqueiro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SelArqueiroMouseClicked(evt);
             }
         });
 
-        SelMago.setIcon(new javax.swing.ImageIcon("C:\\JoanaEnchendo\\JoanaEnchendoRPG\\IMG\\50\\mago.png")); // NOI18N
+        SelMago.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/50/mago.png"))); // NOI18N
         SelMago.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SelMagoMouseClicked(evt);
