@@ -1,6 +1,5 @@
 
 
-
 public class personagem extends Being{
     private int HPMaximo;
     
