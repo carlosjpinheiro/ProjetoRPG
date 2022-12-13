@@ -37,7 +37,4 @@ public abstract class Being {
 		this.nome = nome;
 	}
 	
-	
-	
-	
 }

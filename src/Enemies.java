@@ -1,64 +1,72 @@
 
 public class Enemies extends Being{
 
-    private int Ataque;
-    private int Defesa;
-    private String nomeHabilidade1;
-    
-    public void diminuiHPinimigo(int dano){		//quando recebe ataque
-        int danoFinal = (dano - Defesa);
-        if (danoFinal > 0){
-           HP -= danoFinal;
-        }
-    }
- 
-    public int ataqueSimples() {		//para causar dano
-    	return Ataque;
-    }
-    
-    
-    
-    
-	public int getHP() {
-		return HP;
-	}
+	  
+	    private int ataque;
+	    private int defesa;
+	    private String nomeHabilidade1;
+	    
+	    
+	    
+	    
+	    public void diminuiHP(int dano, int HP){
+	        int danoFinal = (dano - defesa);
+	        if (danoFinal > 0){
+	           HP -= danoFinal;
+	        }
+	    }
+	    
+	    public int calculaDano(int ataque) {
+	        switch (ataque) {
+	            case 1:
+	                return (int) this.ataque;
+	            case 2:
+	               return (int) (ataque*140/100);
+	            default:
+	                return 0;
+	        }
+	    }
+	    
 
-	public void setHP(int hP) {
-		HP = hP;
-	}
+		public Enemies() {
+			// TODO Auto-generated constructor stub
+		}
 
-	public int getAtaque() {
-		return Ataque;
-	}
+	
+		
+		public int calculaDano() {
+			return ataque;
+		}
+	    
+	   
 
-	public void setAtaque(int ataque) {
-		Ataque = ataque;
-	}
+		public int getAtaque() {
+			return ataque;
+		}
 
-	public int getDefesa() {
-		return Defesa;
-	}
+		public void setAtaque(int ataque) {
+			this.ataque = ataque;
+		}
 
-	public void setDefesa(int defesa) {
-		Defesa = defesa;
-	}
+		public int getDefesa() {
+			return defesa;
+		}
 
-	public String getNome() {
-		return nome;
-	}
+		public void setDefesa(int defesa) {
+			this.defesa = defesa;
+		}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 
-	public String getNomeHabilidade1() {
-		return nomeHabilidade1;
-	}
+		public String getNomeHabilidade1() {
+			return nomeHabilidade1;
+		}
 
-	public void setNomeHabilidade1(String nomeHabilidade1) {
-		this.nomeHabilidade1 = nomeHabilidade1;
-	}
-    
-    
-    
+		public void setNomeHabilidade1(String nomeHabilidade1) {
+			this.nomeHabilidade1 = nomeHabilidade1;
+		}
+	    
+	    
+	    
+	    
+
 }
