@@ -9,7 +9,7 @@ public class Enemies extends Being{
 	    
 	    
 	    
-	    public void diminuiHP(int dano, int HP){
+	    public void diminuiHP(int dano){
 	        int danoFinal = (dano - defesa);
 	        if (danoFinal > 0){
 	           HP -= danoFinal;

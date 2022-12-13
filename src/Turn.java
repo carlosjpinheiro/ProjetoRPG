@@ -10,15 +10,15 @@ public class Turn {
 			op = scan.next();
 			switch (op) {
 			case "1":
-				defensor.diminuiHPinimigo(atacante.calculaDano(1));
+				defensor.diminuiHP(atacante.calculaDano(1));
 				System.out.println("Você ataca "+defensor.getnome()+" e o deixa com "+defensor.getHP()+" de HP");
 				break;
 			case "2":
-				defensor.diminuiHPinimigo(atacante.calculaDano(2));
+				defensor.diminuiHP(atacante.calculaDano(2));
 				System.out.println("Você ataca "+defensor.getnome()+" com "+atacante.getNomeHabilidade1()+" e o deixa com "+defensor.getHP()+" de HP");
 				break;
 			case "3":
-				defensor.diminuiHPinimigo(atacante.calculaDano(3));
+				defensor.diminuiHP(atacante.calculaDano(3));
 				System.out.println("Você ataca "+defensor.getnome()+" com "+atacante.getNomeHabilidade2()+" e o deixa com "+defensor.getHP()+" de HP");
 				break;
 
@@ -28,7 +28,10 @@ public class Turn {
 	}
 	
 	public static void turnBot(Enemies atacante, personagem defensor) {
-		defensor.diminuiHP(atacante.ataqueSimples());
+		//implementar logica pra dar ataca especial ou simples
+		
+		
+		//		defensor.diminuiHP(atacante.calculaDano());
 		System.out.println(atacante.getnome()+" lhe ataca, o deixando com "+defensor.getHP()+" de HP");
 	}
 	
