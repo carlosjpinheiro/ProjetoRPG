@@ -9,6 +9,15 @@ public class MainRPG {
 		SelecaoPersonagem tela = new SelecaoPersonagem();
 		tela.setVisible(true);
 	
+//		while (heroi.getHp() > 0) {
+//			if (Encounter.counter > 1) Potions.perguntaUsarHP(heroi);			
+//			System.out.println("Você encontra o inimigo nr "+Encounter.counter);
+//			Encounter.encounter(heroi);
+//			if (Utilities.chance(10)) {
+//				heroi.setHpPotions(heroi.getHpPotions()+1);
+//				System.out.println("Uma poção de HP cai de seu inimigo e você a recolhe!");
+//			}
+//		}
 		
 		
 	}

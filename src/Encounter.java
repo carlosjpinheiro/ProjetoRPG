@@ -3,9 +3,9 @@ public class Encounter {
 
 	public static int counter = 0;
 	private static int rando;
-	private static Being inimigo;
+	private static Enemies inimigo;
 	
-	public static void encounter(Being heroi) {
+	public static void encounter(personagem p) {
 		rando = (int)(Math.random()*100);
 		if(rando < 25) {
 			inimigo = new Enemy1();
@@ -16,9 +16,9 @@ public class Encounter {
 		} else {
 			inimigo = new Enemy4();
 		}
-		System.out.println("Voce encontrou um "+inimigo.getName()+"!");
-		while (heroi.getHp() > 0 && inimigo.getHp() > 0) {
-			Round.round(heroi, inimigo);
+		System.out.println("Voce encontrou um "+inimigo.getnome()+"!");
+		while (p.getHP() > 0 && inimigo.getHP() > 0) {
+			Round.round(p, inimigo);
 		}
 		counter ++;
 	}

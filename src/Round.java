@@ -1,11 +1,11 @@
 
 public class Round {
 
-	public static void round(Being heroi, Being inimigo) {
+	public static void round(personagem heroi, Enemies inimigo) {
 		
 		Turn.turnHuman(heroi, inimigo);
-		if (inimigo.getHp() <= 0) {
-			System.out.println("Você matou "+inimigo.getName()+"!!");
+		if (inimigo.getHP() <= 0) {
+			System.out.println("Você matou "+inimigo.getnome()+"!!");
 		} else Turn.turnBot(inimigo, heroi);
 	}
 	

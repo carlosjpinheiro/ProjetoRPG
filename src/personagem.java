@@ -1,22 +1,25 @@
 
 
 
-public class personagem {
+public class personagem extends Being{
     private int HPMaximo;
-    private int HP;
+    
     private int MPMaximo;
-    private int MP;
+    
     private int AtaqueFisico;
     private int AtaqueMagico;
     private int Defesa;
-    private int Nivel;
+    
     private int XP = 0;
     private int XPNecessario = 100;
     private int PontosForca;
     private int PontosInteligencia;
     private int PontosDestreza;
     private int PontosNaoAplicados;
-    private String nome;
+    private int HpPocoes = 2;
+    private int MpPocoes = 2;
+    
+    
     private String nomeHabilidade1;
     private int consumoManaHabilidade1;
     private double taxaDanoHabilidade1;
@@ -25,14 +28,14 @@ public class personagem {
     private double taxaDanoHabilidade2;
     private boolean personagemMagico;
     
-    public void diminuiHP(int dano){
+    public void diminuiHP(int dano){		//quando recebe o ataque
         int danoFinal = (dano - Defesa);
         if (danoFinal > 0){
            HP -= danoFinal;
         }
     }
 
-    public int calculaDano(int habilidade) {
+    public int calculaDano(int habilidade) {	//para atribuir dano a outro
         switch (habilidade) {
             case 1:
                 if (isPersonagemMagico()) {
@@ -273,5 +276,23 @@ public class personagem {
     public void setPersonagemMagico(boolean personagemMagico) {
         this.personagemMagico = personagemMagico;
     }
+
+	public int getHpPocoes() {
+		return HpPocoes;
+	}
+
+	public void setHpPocoes(int hpPocoes) {
+		HpPocoes = hpPocoes;
+	}
+
+	public int getMpPocoes() {
+		return MpPocoes;
+	}
+
+	public void setMpPocoes(int mpPocoes) {
+		MpPocoes = mpPocoes;
+	}
+    
+    
 
 }

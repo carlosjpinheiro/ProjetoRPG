@@ -17,11 +17,36 @@ public class jogo extends javax.swing.JFrame {
         //inimigo.vivo
         atualizaAtributosPersonagem(p);
     }
-
+    
     private void setPersonagem(personagem p) {
         this.p = p;
     }
 
+    public void rodaEncontros(personagem p) {
+    	while (p.getHP() > 0) {
+    		if (Encounter.counter > 1) Potions.perguntaUsarHP(p);			
+			System.out.println("Você encontra o inimigo nr "+Encounter.counter);
+			Encounter.encounter(p);
+			if (Utilities.chance(10)) {
+				p.setHpPocoes(p.getHpPocoes()+1);
+				System.out.println("Uma poção de HP cai de seu inimigo e você a recolhe!");
+			}
+    		
+    		
+    				
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    		
+    	}
+    }
+    
+    
     public void criaPersonagem(int i, String nome) {
         classe = i;
         switch (i) {
