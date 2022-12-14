@@ -2,13 +2,14 @@ import javax.swing.JOptionPane;
 
 
 public class Jogo extends javax.swing.JFrame {
+	
+	public void imprimeMensagem(String texto) {
+		jTextArea1.setText(jTextArea1.getText()+"\n"+texto);
+	}
 
     public int classe = 0;
     public Personagem p;
     
-	public void imprimeMensagem(String texto) {
-		jTextArea1.setText(jTextArea1.getText()+"\n"+texto);
-	}
     
 	public String fraseInicial = "Você acordou em uma clareira no meio do mato, olha em volta e não vê nada familiar. Não conhece aquele lugar e também não lembra de muita coisa, apenas que estava passeando com sua esposa Magnólia na beira-rio. Um sujeito estranho vem em sua direção:\nEstava bom o sono? Vi que recém chegou aqui, está perdidinho... Não está sentindo falta de nada? Hahahaha";
     public String[] frasesEncontros = {
@@ -39,28 +40,27 @@ public class Jogo extends javax.swing.JFrame {
     private void setPersonagem(Personagem p) {
         this.p = p;
     }
-    
-    public void rodaEncontros(Personagem p) {        //controla fluxo do jogo, chamando encontros , que chamam rodadas e turnos
-        while (p.getHP() > 0) {
-            if (Encounter.counter > 1 && p.getHpPocoes() > 0) Potions.perguntaUsarHP(p);
-            if (Encounter.counter == 1) {
-            	System.out.println(fraseInicial);
-            } else {
-            	System.out.println(selecionaFrase());
-            }
-            System.out.println("Você encontra o inimigo numero "+Encounter.counter);
-            Encounter.encounter(p);
-            if (Utilities.chance(6)) {
-                p.setHpPocoes(p.getHpPocoes() + 1);
-                System.out.println("Uma poção de HP cai de seu inimigo e você a recolhe!");
-            }
-            
-            
-        }
-    }
+
     
     public String selecionaFrase() {			//seleciona e retorna frase entre encontros aleatoria
     	return frasesEncontros[(int)(Math.random()*frasesEncontros.length)];
+    }
+
+    public void rodaEncontros(Personagem p) {		//controla fluxo do jogo, chamando encontros , que chamam rodadas e turnos
+    	while (p.getHP() > 0) {
+    		if (Encounter.counter > 1 && p.getHpPocoes() > 0) Potions.perguntaUsarHP(p);			
+			System.out.println("Você encontra o inimigo número "+Encounter.counter);
+			Encounter.encounter(p);
+			if (Utilities.chance(20)) {
+				if (Utilities.chance(50)) {
+					p.setHpPocoes(p.getHpPocoes()+1);
+					System.out.println("Uma poção de HP cai de seu inimigo e você a recolhe!");
+				} else {
+					p.setMpPocoes(p.getMpPocoes() + 1);
+					System.out.println("Uma poção de MP cai de seu inimigo e você a recolhe!");
+				}
+			}
+    	}
     }
     
     
