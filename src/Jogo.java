@@ -6,6 +6,27 @@ public class Jogo extends javax.swing.JFrame {
     public int classe = 0;
     public Personagem p;
     
+	public void imprimeMensagem(String texto) {
+		jTextArea1.setText(jTextArea1.getText()+"\n"+texto);
+	}
+    
+	public String fraseInicial = "Você acordou em uma clareira no meio do mato, olha em volta e não vê nada familiar. Não conhece aquele lugar e também não lembra de muita coisa, apenas que estava passeando com sua esposa Magnólia na beira-rio. Um sujeito estranho vem em sua direção:\nEstava bom o sono? Vi que recém chegou aqui, está perdidinho... Não está sentindo falta de nada? Hahahaha";
+    public String[] frasesEncontros = {
+    		"Algo se mexeu atrás daquele arbusto. Magnólia! É você?!?",
+    		"Você achou um bote que usa para cruzar um pequeno lago, só que ao chegar lá ouve um barulho estranho mais ao fundo, seria isso um Goblin?",
+    		"Você encontra uma pedra estranha e a vira, percebe um amontoado de vermes azuis, se assusta, vira para trás e percebe de longe um bicho estranho vindo em sua direção.",
+    		"Parada pra pescar, você olha para o outro lado do lado e imediatamente percebe que tem correr.",
+    		"Uma figura estranha vem em sua direção, parece amigável mas percebe que deve manter cautela.",
+    		"Ao caminhar por um estreito caminho no meio da floresta de Sequoias gigantes percebe pegadas não identificadas indo na mesma direção ...",
+    		"Ao lado do caminho na floresta de Sequoias você repara uma vila em ruínas, caminha e entra no que parece ser a antiga igreja do local, por um momento pensa que poderia ser um ótimo local para passar a noite ... até que ... ",
+    		"Ao caminhar pelas ruínas, repara em um armazém com um grande poço ao lado, é um bom momento para parar e beber água, descansa seus 15 minutos, mas logo percebe que compulsoriamente seu descanso chegou ao fim ...",
+    		"Em uma clareira depois de longos momentos de floresta repara em um composto orgânico com um odor de putrefação, percebe logo deve ter mais algum desafio pela frente, mas decide seguir caminhando em busca da Magnólia de peito erguido",
+    		"Você grita desesperadamente em busca da sua esposa, Magnólia, percebe o som ecoando em grandes rochas escuras, acha um local ideal e aparentemente seguro para descansar, de tão cansado, decide dormir por ali mesmo, após 4 horas seu sono é interrompido por altos mugidos. Você entende que um novo desafio vem pela frente.",
+    		"Lentamente uma névoa espessa e escura vai tomando conta de todo o caminho, sua intuição diz que você deveria escalar uma árvore, mas nesse momento já é tarde demais...",
+    		"Você começa a estranhar sua estádia neste novo mundo, tudo esta repetindo na sua cabeça, e por você estar atrás de sua amada, acabou não se tocando até agora..."
+    };
+    
+    
     public void atacarAdversario(int habilidade){
         int dano = p.calculaDano(habilidade);
         JOptionPane.showMessageDialog(null, "dano: " + dano);// pode tirar é somente para debug
@@ -18,22 +39,28 @@ public class Jogo extends javax.swing.JFrame {
     private void setPersonagem(Personagem p) {
         this.p = p;
     }
-
-    public void rodaEncontros(Personagem p) {		//controla fluxo do jogo, chamando encontros , que chamam rodadas e turnos
-    	while (p.getHP() > 0) {
-    		if (Encounter.counter > 1) Potions.perguntaUsarHP(p);			
-			System.out.println("Você encontra o inimigo nr "+Encounter.counter);
-			Encounter.encounter(p);
-			if (Utilities.chance(10)) {
-				p.setHpPocoes(p.getHpPocoes()+1);
-				System.out.println("Uma poção de HP cai de seu inimigo e você a recolhe!");
-			}
-    		
-    		
-    				
-    		
-    		
-    	}
+    
+    public void rodaEncontros(Personagem p) {        //controla fluxo do jogo, chamando encontros , que chamam rodadas e turnos
+        while (p.getHP() > 0) {
+            if (Encounter.counter > 1 && p.getHpPocoes() > 0) Potions.perguntaUsarHP(p);
+            if (Encounter.counter == 1) {
+            	System.out.println(fraseInicial);
+            } else {
+            	System.out.println(selecionaFrase());
+            }
+            System.out.println("Você encontra o inimigo numero "+Encounter.counter);
+            Encounter.encounter(p);
+            if (Utilities.chance(6)) {
+                p.setHpPocoes(p.getHpPocoes() + 1);
+                System.out.println("Uma poção de HP cai de seu inimigo e você a recolhe!");
+            }
+            
+            
+        }
+    }
+    
+    public String selecionaFrase() {			//seleciona e retorna frase entre encontros aleatoria
+    	return frasesEncontros[(int)(Math.random()*frasesEncontros.length)];
     }
     
     

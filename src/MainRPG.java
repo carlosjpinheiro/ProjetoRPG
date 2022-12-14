@@ -14,8 +14,7 @@ public class MainRPG {
 		
 		
 		j.rodaEncontros(p);
-		
-		
+//		j.selecionaFrase();
 		
 	}
 }
