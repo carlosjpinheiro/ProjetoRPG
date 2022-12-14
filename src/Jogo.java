@@ -2,6 +2,10 @@ import javax.swing.JOptionPane;
 
 
 public class Jogo extends javax.swing.JFrame {
+	
+	public void imprimeMensagem(String texto) {
+		jTextArea1.setText(jTextArea1.getText()+"\n"+texto);
+	}
 
     public int classe = 0;
     public Personagem p;
