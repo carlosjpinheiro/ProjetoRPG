@@ -35,13 +35,13 @@ public class Encounter {
 			} else {
 				rando = (int)(Math.random()*100);
 				if(rando < 25) {
-					inimigo = new Enemy1();
+					inimigo = new Enemy1(p.getNivel());
 				} else if (rando < 50) {
-					inimigo = new Enemy2();
+					inimigo = new Enemy2(p.getNivel());
 				} else if (rando < 75) {
-					inimigo = new Enemy3();
+					inimigo = new Enemy3(p.getNivel());
 				} else {
-					inimigo = new Enemy4();
+					inimigo = new Enemy4(p.getNivel());
 				}
 				System.out.println("Voce encontrou um "+inimigo.getnome()+"!");
 				while (p.getHP() > 0 && inimigo.getHP() > 0) {

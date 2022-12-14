@@ -19,7 +19,7 @@ public class Jogo extends javax.swing.JFrame {
         this.p = p;
     }
 
-    public void rodaEncontros(Personagem p) {
+    public void rodaEncontros(Personagem p) {		//controla fluxo do jogo, chamando encontros , que chamam rodadas e turnos
     	while (p.getHP() > 0) {
     		if (Encounter.counter > 1) Potions.perguntaUsarHP(p);			
 			System.out.println("Você encontra o inimigo nr "+Encounter.counter);

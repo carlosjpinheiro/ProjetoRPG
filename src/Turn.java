@@ -6,7 +6,7 @@ public class Turn {
 	private static String op;
 	
 	public static void turnHuman(Personagem atacante, Enemies defensor) {
-		 System.out.println("Digite:\n1-Ataque normal\n2-Ataque Especial 1 (usa MP)\n3-Ataque Especial 1 (usa MP)");
+		 System.out.println("Digite:\n1-Ataque normal\n2-Ataque Especial 1 (usa MP)\n3-Ataque Especial 2 (usa MP)");
 			op = scan.next();
 			switch (op) {
 			case "1":
@@ -41,7 +41,6 @@ public class Turn {
 			}
 	}
 	
-<<<<<<< HEAD
 	public static void turnBot(Enemies atacante, Personagem defensor) {
 		if (Utilities.chance(20)) {			//20% de chance do inimigo dar o ataque especial e 80% de atck normal
 			defensor.diminuiHP(atacante.calculaDano(2));
@@ -62,10 +61,10 @@ public class Turn {
 	}
 	
 	
-}
-=======
+
+
 	public static void turnHuman(Personagem atacante, Bosses defensor) {
-		System.out.println("Digite:\n1-Ataque normal\n2-Ataque Especial 1 (usa MP)\n3-Ataque Especial 1 (usa MP)");
+		System.out.println("Digite:\n1-Ataque normal\n2-Ataque Especial 1 (usa MP)\n3-Ataque Especial 2 (usa MP)");
 		op = scan.next();
 		switch (op) {
 		case "1":
@@ -100,24 +99,6 @@ public class Turn {
 		}
 	}
 	
-	public static void turnBot(Enemies atacante, Personagem defensor) {
-		if (Utilities.chance(20)) {			//20% de chance do inimigo dar o ataque especial e 80% de atck normal
-			defensor.diminuiHP(atacante.calculaDano(2));
-			if (defensor.getHP() <= 0) {
-				System.out.println(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
-			} else {
-				System.out.println(atacante.getnome()+" lhe ataca com "+atacante.getNomeHabilidade1()+" o deixando com "+defensor.getHP()+" de HP");				
-			}
-		} else {
-			defensor.diminuiHP(atacante.calculaDano(1));
-			if (defensor.getHP() <= 0) {
-				System.out.println(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
-			} else {
-				System.out.println(atacante.getnome()+" lhe ataca, o deixando com "+defensor.getHP()+" de HP");				
-			}
-		}
-		
-	}
 	
 	public static void turnBot(Bosses atacante, Personagem defensor) {
 		if (Utilities.chance(20)) {			//20% de chance do inimigo dar o ataque especial e 80% de atck normal
@@ -140,4 +121,3 @@ public class Turn {
 	
 	
 }
->>>>>>> fc51532092c5feab467f754cf3f10ab6c6de9298

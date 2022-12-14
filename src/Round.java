@@ -9,7 +9,7 @@ public class Round {
 		} else Turn.turnBot(inimigo, heroi);
 	}
 	
-	public static void round(personagem heroi, Bosses inimigo) {
+	public static void round(Personagem heroi, Bosses inimigo) {
 		
 		Turn.turnHuman(heroi, inimigo);
 		if (inimigo.getHP() <= 0) {

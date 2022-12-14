@@ -17,7 +17,7 @@ public class Arqueiro extends Personagem {
         setNomeHabilidade1("Disparo Critico");
         setConsumoManaHabilidade1(15);
         setTaxaDanoHabilidade1(1.5);
-        setNomeHabilidade2("Chuva de Flexas");
+        setNomeHabilidade2("Chuva de Flechas");
         setConsumoManaHabilidade2(35);
         setTaxaDanoHabilidade2(2.5);  
         setPersonagemMagico(true);
