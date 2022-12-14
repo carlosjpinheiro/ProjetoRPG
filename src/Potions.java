@@ -16,7 +16,7 @@ public class Potions {
 				p.setHpPocoes(p.getHpPocoes()-1);
 				System.out.println("Após tomar a poção seu HP é de: "+p.getHP());
 				if (p.getHpPocoes() == 1) {
-					System.out.println("Lhe resta "+p.getHpPocoes()+" poção de HP");	
+					System.out.println("Lhe resta 1 poção de HP");	
 				} else {
 					System.out.println("Lhe restam "+p.getHpPocoes()+" poções de HP");
 				}
