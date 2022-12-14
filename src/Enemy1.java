@@ -20,6 +20,7 @@ public class Enemy1 extends Enemies{
 		this.setAtaque(20+(int)Math.round((20*fatorCrescimento))/100);
 		this.setDefesa(5+(int)Math.round((5*fatorCrescimento))/100);
 		this.setnome("Bandido");
+		this.setNomeHabilidade1("Roubo de vida");
 	}
 
 	

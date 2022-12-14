@@ -20,6 +20,7 @@ public class Enemy4 extends Enemies{
 		this.setAtaque(7+(int)Math.round((7*fatorCrescimento))/100);
 		this.setDefesa(6+(int)Math.round((6*fatorCrescimento))/100);
 		this.setnome("Urso");
+		this.setNomeHabilidade1("Mordida profunda");
 	}
 	
 }

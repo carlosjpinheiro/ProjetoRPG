@@ -20,6 +20,7 @@ public class Enemy5 extends Enemies{
 		this.setAtaque(9+(int)Math.round((9*fatorCrescimento))/100);
 		this.setDefesa(2+(int)Math.round((2*fatorCrescimento))/100);
 		this.setnome("Zumbi");
+		this.setNomeHabilidade1("Mordida venenosa");
 	}
 	
 }

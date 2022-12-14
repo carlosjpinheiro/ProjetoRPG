@@ -20,6 +20,7 @@ public class Enemy2 extends Enemies{
 		this.setAtaque(6+(int)Math.round((6*fatorCrescimento))/100);
 		this.setDefesa(6+(int)Math.round((6*fatorCrescimento))/100);
 		this.setnome("Goblin");
+		this.setNomeHabilidade1("Arremeço ao ar");
 	}
 }
 

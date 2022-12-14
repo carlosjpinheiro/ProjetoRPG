@@ -21,5 +21,6 @@ public class Enemy3 extends Enemies{
 		this.setAtaque(8+(int)Math.round((8*fatorCrescimento))/100);
 		this.setDefesa(5+(int)Math.round((5*fatorCrescimento))/100);
 		this.setnome("ORC");
+		this.setNomeHabilidade1("Corte profundo");
 	}
 }
