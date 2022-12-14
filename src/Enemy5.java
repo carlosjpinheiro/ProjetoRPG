@@ -12,4 +12,14 @@ public class Enemy5 extends Enemies{
 		this.setNomeHabilidade1("Mordida venenosa");
 	}
 
+	public Enemy5(int nivel) {
+		super();
+		double fatorCrescimento = nivel * 10;
+		this.setHP(50+(int)Math.round((40 * fatorCrescimento))/100);
+		this.setNivel(nivel);
+		this.setAtaque(9+(int)Math.round((9*fatorCrescimento))/100);
+		this.setDefesa(2+(int)Math.round((2*fatorCrescimento))/100);
+		this.setnome("Zumbi");
+	}
+	
 }
