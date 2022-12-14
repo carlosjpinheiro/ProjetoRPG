@@ -27,7 +27,8 @@ public class Encounter {
 				break;
 			}
 			
-			System.out.println("Você encontrou o chefão " + boss.getnome() + "!");
+			//System.out.println("Você encontrou o chefão " + boss.getnome() + "!");
+			Jogo.imprimeMensagem("Você encontrou o chefão " + boss.getnome() + "!");
 			while (p.getHP() > 0 && boss.getHP() > 0) {
 				Round.round(p, boss);
 			}
@@ -43,7 +44,8 @@ public class Encounter {
 				} else {
 					inimigo = new Enemy4(p.getNivel());
 				}
-				System.out.println("Voce encontrou um "+inimigo.getnome()+"!");
+				//System.out.println("Voce encontrou um "+inimigo.getnome()+"!");
+				Jogo.imprimeMensagem("Voce encontrou um "+inimigo.getnome()+"!");
 				while (p.getHP() > 0 && inimigo.getHP() > 0) {
 					Round.round(p, inimigo);
 				}			

@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 
 public class Jogo extends javax.swing.JFrame {
 	
-	public void imprimeMensagem(String texto) {
+	public static void imprimeMensagem(String texto) {
 		jTextArea1.setText(jTextArea1.getText()+"\n"+texto);
 	}
 
@@ -49,15 +49,18 @@ public class Jogo extends javax.swing.JFrame {
     public void rodaEncontros(Personagem p) {		//controla fluxo do jogo, chamando encontros , que chamam rodadas e turnos
     	while (p.getHP() > 0) {
     		if (Encounter.counter > 1 && p.getHpPocoes() > 0) Potions.perguntaUsarHP(p);			
-			System.out.println("Você encontra o inimigo número "+Encounter.counter);
+			//System.out.println("Você encontra o inimigo número "+Encounter.counter);
+			imprimeMensagem("Você encontra o inimigo número "+Encounter.counter);
 			Encounter.encounter(p);
 			if (Utilities.chance(20)) {
 				if (Utilities.chance(50)) {
 					p.setHpPocoes(p.getHpPocoes()+1);
-					System.out.println("Uma poção de HP cai de seu inimigo e você a recolhe!");
+					//System.out.println("Uma poção de HP cai de seu inimigo e você a recolhe!");
+					imprimeMensagem("Uma poção de HP cai de seu inimigo e você a recolhe!");
 				} else {
 					p.setMpPocoes(p.getMpPocoes() + 1);
-					System.out.println("Uma poção de MP cai de seu inimigo e você a recolhe!");
+					//System.out.println("Uma poção de MP cai de seu inimigo e você a recolhe!");
+					imprimeMensagem("Uma poção de MP cai de seu inimigo e você a recolhe!");
 				}
 			}
     	}
@@ -536,7 +539,7 @@ public class Jogo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private static javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel necessarionv10;
     private javax.swing.JLabel necessarionv2;
     // End of variables declaration//GEN-END:variables
