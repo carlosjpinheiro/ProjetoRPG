@@ -5,7 +5,7 @@ public class Potions {
 	static Scanner scan = new Scanner(System.in);
 	static String op;
 	
-	public static void perguntaUsarHP(personagem p) {
+	public static void perguntaUsarHP(Personagem p) {
 		System.out.println("Deseja usar poção de HP?\n1-Sim\n2-Não");
 		op = scan.next();
 		switch (op) {
@@ -29,7 +29,7 @@ public class Potions {
 		}
 	}
 	
-	public static void perguntaUsarMP(personagem p) {
+	public static void perguntaUsarMP(Personagem p) {
 		System.out.println("Deseja usar poção de MP?\n1-Sim\n2-Não");
 		op = scan.next();
 		switch (op) {

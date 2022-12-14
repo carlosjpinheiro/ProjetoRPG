@@ -1,7 +1,7 @@
 
 public class Round {
 
-	public static void round(personagem heroi, Enemies inimigo) {
+	public static void round(Personagem heroi, Enemies inimigo) {
 		
 		Turn.turnHuman(heroi, inimigo);
 		if (inimigo.getHP() <= 0) {

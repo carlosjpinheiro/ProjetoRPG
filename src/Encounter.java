@@ -5,7 +5,7 @@ public class Encounter {
 	private static int rando;
 	private static Enemies inimigo;
 	
-	public static void encounter(personagem p) {
+	public static void encounter(Personagem p) {
 		rando = (int)(Math.random()*100);
 		if(rando < 25) {
 			inimigo = new Enemy1();

@@ -4,6 +4,12 @@ public abstract class Being {
 	public int HP,MP,Nivel;
 	public String nome;
 		
+	public abstract void diminuiHP(int dano);
+	
+	public abstract int calculaDano(int habilidade);
+	
+	
+	
 
 	public int getHP() {
 		return HP;

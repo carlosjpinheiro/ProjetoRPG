@@ -1,5 +1,5 @@
-public class arqueiro extends personagem {
-    public arqueiro(String nome) {
+public class Arqueiro extends Personagem {
+    public Arqueiro(String nome) {
         setNome(nome);
         setHPMaximo(90);
         setHP(90);
@@ -7,7 +7,7 @@ public class arqueiro extends personagem {
         setMP(80);
         setAtaqueFisico(25);
         setAtaqueMagico(10);
-        setDefesa(15);
+        setDefesa(0);
         setNivel(1);
         setXP(0);
         setPontosForca(4);

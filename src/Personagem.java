@@ -1,7 +1,7 @@
 
 
 
-public class personagem extends Being{
+public class Personagem extends Being{
     private int HPMaximo;    
     private int MPMaximo;    
     private int AtaqueFisico;

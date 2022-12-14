@@ -1,10 +1,10 @@
 import javax.swing.JOptionPane;
 
 
-public class jogo extends javax.swing.JFrame {
+public class Jogo extends javax.swing.JFrame {
 
     public int classe = 0;
-    public personagem p;
+    public Personagem p;
     
     public void atacarAdversario(int habilidade){
         int dano = p.calculaDano(habilidade);
@@ -15,11 +15,11 @@ public class jogo extends javax.swing.JFrame {
         atualizaAtributosPersonagem(p);
     }
     
-    private void setPersonagem(personagem p) {
+    private void setPersonagem(Personagem p) {
         this.p = p;
     }
 
-    public void rodaEncontros(personagem p) {
+    public void rodaEncontros(Personagem p) {
     	while (p.getHP() > 0) {
     		if (Encounter.counter > 1) Potions.perguntaUsarHP(p);			
 			System.out.println("Você encontra o inimigo nr "+Encounter.counter);
@@ -33,13 +33,6 @@ public class jogo extends javax.swing.JFrame {
     				
     		
     		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
     	}
     }
     
@@ -48,16 +41,16 @@ public class jogo extends javax.swing.JFrame {
         classe = i;
         switch (i) {
             case 1:
-                setPersonagem(new guerreiro(nome));
+                setPersonagem(new Guerreiro(nome));
                 break;
             case 2:
-                setPersonagem(new mago(nome));
+                setPersonagem(new Mago(nome));
                 break;
             case 3:
-                setPersonagem(new arqueiro(nome));
+                setPersonagem(new Arqueiro(nome));
                 break;
             case 4:
-                setPersonagem(new assassino(nome));
+                setPersonagem(new Assassino(nome));
                 break;
             default:
                 break;
@@ -101,7 +94,7 @@ public class jogo extends javax.swing.JFrame {
 
     
 
-    public void atualizaAtributosPersonagem(personagem p) {
+    public void atualizaAtributosPersonagem(Personagem p) {
         DisplayHP.setText(p.getHP()+"/"+p.getHPMaximo());
         DisplayMP.setText(p.getMP()+"/"+p.getMPMaximo());
         DisplayAtackFisico.setText(String.valueOf(p.getAtaqueFisico()));
@@ -145,7 +138,7 @@ public class jogo extends javax.swing.JFrame {
     /**
      * Creates new form jogo
      */
-    public jogo() {
+    public Jogo() {
         initComponents();
     }
 
@@ -477,20 +470,20 @@ public class jogo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         // </editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new jogo().setVisible(true);
+                new Jogo().setVisible(true);
             }
         });
     }

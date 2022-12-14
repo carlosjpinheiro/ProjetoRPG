@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class SelecaoPersonagem extends javax.swing.JFrame {
     public void iniciaJogo(int i){
         String nome = JOptionPane.showInputDialog("Insira seu NickName:");
-        jogo telaJogo = new jogo();
+        Jogo telaJogo = new Jogo();
         telaJogo.criaPersonagem(i, nome);
         telaJogo.setVisible(true);
     }

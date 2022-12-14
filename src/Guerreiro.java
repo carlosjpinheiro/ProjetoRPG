@@ -1,5 +1,5 @@
-public class guerreiro extends personagem {
-    public guerreiro(String nome) {
+public class Guerreiro extends Personagem {
+    public Guerreiro(String nome) {
         setNome(nome);
         setHPMaximo(100);
         setHP(100);
