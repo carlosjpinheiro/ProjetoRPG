@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import javax.swing.JOptionPane;
 
 
@@ -182,6 +184,11 @@ public class Jogo extends javax.swing.JFrame {
      */
     public Jogo() {
         initComponents();
+         Color minhaCor = new Color(159, 213, 236);
+        Color CorPanel = new Color(157, 183, 250);
+        
+        getContentPane().setBackground(minhaCor);
+        jPanel1.setBackground(CorPanel);
     }
 
     /**
@@ -473,6 +480,9 @@ public class Jogo extends javax.swing.JFrame {
            atualizaAtributosPersonagem(p);
        }
     }//GEN-LAST:event_DisplayDestrezaMouseClicked
+    
+    
+   
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          p.addXP(6);
@@ -486,10 +496,12 @@ public class Jogo extends javax.swing.JFrame {
         Boss2 b2 = new Boss2();
         Boss3 b3 = new Boss3();
                 
-        
+       
+
         atualizaAtributosInimigo(ORC);
         imprimeMensagem(fraseInicial);
         imprimeMensagem("lh");
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnHabilidade1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHabilidade1ActionPerformed

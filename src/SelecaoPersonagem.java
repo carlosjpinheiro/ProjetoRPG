@@ -1,6 +1,8 @@
 
 
 
+import java.awt.Color;
+
 import javax.swing.JOptionPane;
 
 
@@ -14,8 +16,12 @@ public class SelecaoPersonagem extends javax.swing.JFrame {
 
     public SelecaoPersonagem() {
         initComponents();
+        Color minhaCor = new Color(159, 213, 236);
+         getContentPane().setBackground(minhaCor);
     }
 
+
+    
  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
