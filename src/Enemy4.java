@@ -22,6 +22,8 @@ public class Enemy4 extends Enemies{
 		this.setDefesa(6+(int)Math.round((6*fatorCrescimento))/100);
 		this.setnome("Urso");
 		this.setNomeHabilidade1("Mordida profunda");
+		 this.setimagem("/img/inimigo/ursorpg.jpg");
+		
 	}
 	
 }

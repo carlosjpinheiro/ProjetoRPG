@@ -22,6 +22,7 @@ public class Enemy1 extends Enemies{
 		this.setDefesa(5+(int)Math.round((5*fatorCrescimento))/100);
 		this.setnome("Bandido");
 		this.setNomeHabilidade1("Roubo de vida");
+		  this.setimagem("/img/inimigo/bandido.jpg");
 		
 	}
 
