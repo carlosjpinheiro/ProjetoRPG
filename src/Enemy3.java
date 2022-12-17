@@ -10,6 +10,7 @@ public class Enemy3 extends Enemies{
 		this.setAtaque(8);
 		this.setDefesa(5);
 		this.setNomeHabilidade1("Corte profundo");
+        this.setimagem("/img/inimigo/ORC.jpg");
 
 	}
 	
@@ -22,5 +23,6 @@ public class Enemy3 extends Enemies{
 		this.setDefesa(5+(int)Math.round((5*fatorCrescimento))/100);
 		this.setnome("ORC");
 		this.setNomeHabilidade1("Corte profundo");
+		this.setimagem("/img/inimigo/ORG.jpg");
 	}
 }

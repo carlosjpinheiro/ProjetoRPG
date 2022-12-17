@@ -11,6 +11,7 @@ public class Boss1 extends Bosses{
         this.setTaxaDanoHabilidade1(1.2);
         this.setTaxaDanoHabilidade2(1.9);
         this.setnome("Rato Gigante");
+        this.setimagem("/img/inimigo/RatoGigate.jpg");
     }
     
 }

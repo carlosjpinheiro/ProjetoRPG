@@ -11,6 +11,7 @@ public class Boss3 extends Bosses{
         this.setTaxaDanoHabilidade1(1.7);
         this.setTaxaDanoHabilidade2(2.5);
         this.setnome("Necromante");
+        this.setimagem("/img/inimigo/Necromante.jpg");
     }
     
 }

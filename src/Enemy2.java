@@ -10,6 +10,7 @@ public class Enemy2 extends Enemies{
 		this.setAtaque(6);
 		this.setDefesa(6);
 		this.setNomeHabilidade1("Arremeço ao ar");
+        this.setimagem("/img/inimigo/Goblin.jpg");
 	}
 	
 	public Enemy2(int nivel) {

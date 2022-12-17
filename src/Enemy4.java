@@ -10,6 +10,7 @@ public class Enemy4 extends Enemies{
 		this.setAtaque(7);
 		this.setDefesa(6);
 		this.setNomeHabilidade1("Mordida profunda");
+        this.setimagem("/img/inimigo/ursorpg.jpg");
 	}
 	
 	public Enemy4(int nivel) {

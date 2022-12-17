@@ -8,8 +8,15 @@ public abstract class Being {
 	
 	public abstract int calculaDano(int habilidade);
 	
+	public String imagem;
 	
-	
+	public String getimagem() {
+		return imagem;
+	}
+
+	public void setimagem(String imagem) {
+		this.imagem = imagem;
+	}
 
 	public int getHP() {
 		return HP;

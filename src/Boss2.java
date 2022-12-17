@@ -10,6 +10,7 @@ public class Boss2 extends Bosses{
         this.setTaxaDanoHabilidade1(1.5);
         this.setTaxaDanoHabilidade2(2.2);
         this.setnome("Bruxa");
+        this.setimagem("/img/inimigo/Bruxo.jpg");
     }
     
 }

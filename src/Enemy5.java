@@ -10,6 +10,7 @@ public class Enemy5 extends Enemies{
 		this.setAtaque(9);
 		this.setDefesa(2);
 		this.setNomeHabilidade1("Mordida venenosa");
+        this.setimagem("/img/inimigo/zumbi.jpg");
 	}
 
 	public Enemy5(int nivel) {

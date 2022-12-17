@@ -4,7 +4,10 @@ import javax.swing.JOptionPane;
 public class Jogo extends javax.swing.JFrame {
 	
 	public static void imprimeMensagem(String texto) {
-		jTextArea1.setText(jTextArea1.getText()+"\n"+texto);
+		jTextArea1.setText(texto+"\n"+jTextArea1.getText());
+	}
+	public static void LimpaMensagem() {
+		jTextArea1.setText("");
 	}
 
     public int classe = 0;
@@ -32,7 +35,7 @@ public class Jogo extends javax.swing.JFrame {
         int dano = p.calculaDano(habilidade);
         JOptionPane.showMessageDialog(null, "dano: " + dano);// pode tirar é somente para debug
         //p.addXP(dano); adionar a quantidade de dano como xp?
-        //inimigo.diminuiHP(dano) atribuir dano ao inimico (implementar)
+        //inimigo.diminuiHP(dano) atribuir dano ao inimigo (implementar)
         //inimigo.vivo
         atualizaAtributosPersonagem(p);
     }
@@ -48,7 +51,7 @@ public class Jogo extends javax.swing.JFrame {
 
     public void rodaEncontros(Personagem p) {		//controla fluxo do jogo, chamando encontros , que chamam rodadas e turnos
     	imprimeMensagem(fraseInicial);
-    	while (p.getHP() > 0) {
+    while (p.getHP() > 0) {
     		if (Encounter.counter > 1 && p.getHpPocoes() > 0) Potions.perguntaUsarHP(p);
     		imprimeMensagem(selecionaFrase());
 			//System.out.println("Você encontra o inimigo número "+Encounter.counter);
@@ -71,6 +74,8 @@ public class Jogo extends javax.swing.JFrame {
     
     public void criaPersonagem(int i, String nome) {
         classe = i;
+        LimpaMensagem();
+       
         switch (i) {
             case 1:
                 setPersonagem(new Guerreiro(nome));
@@ -88,6 +93,7 @@ public class Jogo extends javax.swing.JFrame {
                 break;
         }
         atualizaAtributosPersonagem(p);
+        
 
     }
 
@@ -125,7 +131,11 @@ public class Jogo extends javax.swing.JFrame {
     }
 
     
-
+    public void atualizaAtributosInimigo(Being e) {
+    	jLabel12.setText(e.nome.toUpperCase()+" NIVEL "+e.Nivel);
+    	jLabel10.setText(e.HP+" HP");
+    	jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource(e.getimagem())));
+    }
     public void atualizaAtributosPersonagem(Personagem p) {
         DisplayHP.setText(p.getHP()+"/"+p.getHPMaximo());
         DisplayMP.setText(p.getMP()+"/"+p.getMPMaximo());
@@ -265,7 +275,7 @@ public class Jogo extends javax.swing.JFrame {
         jLabel10.setText("[######      ] 600/100HP");
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ORC.png"))); // NOI18N
-        jLabel11.setText("jLabel11");
+        jLabel11.setText("");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
         jLabel12.setText("ORC FURIOSO NIVEL 97");
@@ -466,7 +476,20 @@ public class Jogo extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          p.addXP(6);
-         atualizaAtributosPersonagem(p);
+        atualizaAtributosPersonagem(p);
+        Enemy1 Bandido = new Enemy1();
+        Enemy2 Goblin = new Enemy2();
+        Enemy3 ORC = new Enemy3();
+        Enemy4 Urso = new Enemy4();
+        Enemy5 Zumbi = new Enemy5();
+        Boss1 Rato = new Boss1();
+        Boss2 b2 = new Boss2();
+        Boss3 b3 = new Boss3();
+                
+        
+        atualizaAtributosInimigo(ORC);
+        imprimeMensagem(fraseInicial);
+        imprimeMensagem("lh");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnHabilidade1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHabilidade1ActionPerformed
