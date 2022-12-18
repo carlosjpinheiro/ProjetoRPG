@@ -1,9 +1,9 @@
 
 public class Round {
 
-	public static void round(Personagem heroi, Enemies inimigo) {
+	public static void round(Personagem heroi, Being inimigo) {
 		
-		Turn.turnHuman(heroi, inimigo);
+		//Turn.turnHuman(heroi, inimigo);
 		if (inimigo.getHP() <= 0) {
 			//System.out.println("Você matou "+inimigo.getnome()+"!!");
 			//System.out.println("-------------------");
@@ -11,14 +11,6 @@ public class Round {
 		} else Turn.turnBot(inimigo, heroi);
 	}
 	
-	public static void round(Personagem heroi, Bosses inimigo) {
-		
-		Turn.turnHuman(heroi, inimigo);
-		if (inimigo.getHP() <= 0) {
-			//System.out.println("Você matou "+inimigo.getnome()+"!!");
-			//System.out.println("-------------------");
-			Jogo.imprimeMensagem("Você matou "+inimigo.getnome()+"!!");
-		} else Turn.turnBot(inimigo, heroi);
-	}
+
 	
 }

@@ -3,6 +3,7 @@ public abstract class Being {
 	
 	public int HP,MP,Nivel;
 	public String nome;
+	private String nomeHabilidade1;
 		
 	public abstract void diminuiHP(int dano);
 	
@@ -16,6 +17,15 @@ public abstract class Being {
 
 	public void setimagem(String imagem) {
 		this.imagem = imagem;
+	}
+	
+
+	public String getNomeHabilidade1() {
+		return nomeHabilidade1;
+	}
+
+	public void setNomeHabilidade1(String nomeHabilidade1) {
+		this.nomeHabilidade1 = nomeHabilidade1;
 	}
 
 	public int getHP() {

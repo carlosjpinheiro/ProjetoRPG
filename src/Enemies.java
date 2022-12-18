@@ -4,7 +4,6 @@ public class Enemies extends Being{
 	  
 	    private int ataque;
 	    private int defesa;
-	    private String nomeHabilidade1;
 	    
 	    
 	    
@@ -56,17 +55,5 @@ public class Enemies extends Being{
 			this.defesa = defesa;
 		}
 
-
-		public String getNomeHabilidade1() {
-			return nomeHabilidade1;
-		}
-
-		public void setNomeHabilidade1(String nomeHabilidade1) {
-			this.nomeHabilidade1 = nomeHabilidade1;
-		}
 	    
-	    
-	    
-	    
-
 }

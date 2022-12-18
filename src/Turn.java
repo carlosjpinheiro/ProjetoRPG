@@ -5,7 +5,7 @@ public class Turn {
 	static Scanner scan = new Scanner(System.in);
 	private static String op;
 	
-	public static void turnHuman(Personagem atacante, Enemies defensor) {	//os turnos de humano tem a escolha de ataque no teclado, no formato visual devem ser botões
+	/*public static void turnHuman(Personagem atacante, Being defensor) {	//os turnos de humano tem a escolha de ataque no teclado, no formato visual devem ser botões
 			//System.out.println("-------------------");		
 			//System.out.println("Mana Points: " + atacante.getMP());
 			//System.out.print("1 - Ataque normal\n2 - Ataque Especial 1 (usa MP)\n3 - Ataque Especial 2 (usa MP)\nDigite: ");
@@ -80,14 +80,16 @@ public class Turn {
 			default:
 				break;
 			}
-	}
+	}*/
 	
-	public static void turnBot(Enemies atacante, Personagem defensor) {
+	public static void turnBot(Being atacante, Personagem defensor) {
 		if (Utilities.chance(20)) {			//20% de chance do inimigo dar o ataque especial e 80% de atck normal
 			defensor.diminuiHP(atacante.calculaDano(2));
 			if (defensor.getHP() <= 0) {
 				//System.out.println(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
 				Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
+				Jogo.imprimeMensagem("Você morreu!");
+				ObjetosJogo.finalizaJogo();
 			} else {
 				//System.out.println(atacante.getnome()+" lhe ataca com "+atacante.getNomeHabilidade1()+" o deixando com "+defensor.getHP()+" de HP");				
 				Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca com "+atacante.getNomeHabilidade1()+" o deixando com "+defensor.getHP()+" de HP");
@@ -97,6 +99,8 @@ public class Turn {
 			if (defensor.getHP() <= 0) {
 				//System.out.println(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
 				Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
+				Jogo.imprimeMensagem("Você morreu!");
+				ObjetosJogo.finalizaJogo();
 			} else {
 				//System.out.println(atacante.getnome()+" lhe ataca, o deixando com "+defensor.getHP()+" de HP");		
 				Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca, o deixando com "+defensor.getHP()+" de HP");
@@ -106,7 +110,7 @@ public class Turn {
 	}
 	
 	
-	public static void turnHuman(Personagem atacante, Bosses defensor) {	//os turnos de humano tem a escolha de ataque no teclado, no formato visual devem ser botões
+	/*public static void turnHuman(Personagem atacante, Bosses defensor) {	//os turnos de humano tem a escolha de ataque no teclado, no formato visual devem ser botões
 		//System.out.println("-------------------");		
 		//System.out.println("Mana Points: " + atacante.getMP());
 		//System.out.print("1 - Ataque normal\n2 - Ataque Especial 1 (usa MP)\n3 - Ataque Especial 2 (usa MP)\nDigite: ");
@@ -204,7 +208,7 @@ public class Turn {
 		}
 	}
 	
-}
+}*/
 
 	
 	
