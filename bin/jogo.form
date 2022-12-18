@@ -33,56 +33,67 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="DisplayMP" pref="135" max="32767" attributes="0"/>
-                                      <Component id="DisplayAtackFisico" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="DisplayAtackMagico" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="DisplayDefasa" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="DisplayHP" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="DisplayMP" pref="135" max="32767" attributes="0"/>
+                                  <Component id="DisplayAtackFisico" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="DisplayAtackMagico" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="DisplayDefasa" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Displaypontosdisponiveis" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="DisplayDestreza" max="32767" attributes="0"/>
-                                              <Component id="DisplayForca" alignment="0" max="32767" attributes="0"/>
+                              <Component id="DisplayHP" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="Displaypontosdisponiveis" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="btnHabilidade3" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="btnHabilidade2" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="btnHabilidade1" alignment="0" max="32767" attributes="0"/>
                                           </Group>
-                                          <Component id="DisplayInteligencia" min="-2" pref="150" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="btnHabilidade3" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="btnHabilidade2" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="btnHabilidade1" alignment="0" max="32767" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="necessarionv2" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="necessarionv10" min="-2" max="-2" attributes="0"/>
-                                              </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="necessarionv2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="necessarionv10" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="DisplayInteligencia" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="DisplayDestreza" max="32767" attributes="0"/>
+                                                  <Component id="DisplayForca" alignment="0" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="DisplayMPPOTION" min="-2" max="-2" attributes="0"/>
+                                              <Component id="DisplayHPPOTION" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="DisplayNickXP" min="-2" pref="470" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="DisplayNickXP" min="-2" pref="470" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <Component id="jPanel1" min="-2" pref="323" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" pref="349" max="-2" attributes="0"/>
+              <EmptySpace pref="28" max="32767" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="745" max="-2" attributes="0"/>
+                  <Component id="DisplayHPPOTION2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="38" max="32767" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -96,7 +107,7 @@
                       <Component id="DisplayNickXP" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace pref="61" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="DisplayHP" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="DisplayMP" min="-2" max="-2" attributes="0"/>
@@ -110,9 +121,18 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="DisplayForca" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                              <Component id="DisplayInteligencia" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="DisplayForca" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="DisplayInteligencia" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="DisplayHPPOTION" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="DisplayMPPOTION" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="DisplayDestreza" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -141,6 +161,13 @@
                           </Group>
                       </Group>
                   </Group>
+              </Group>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="113" pref="113" max="-2" attributes="0"/>
+                  <Component id="DisplayHPPOTION2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="261" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -240,20 +267,24 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel11" min="-2" pref="117" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
                   <Component id="jLabel10" min="-2" pref="470" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel13" min="-2" pref="470" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
-              <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane1" min="-2" pref="310" max="-2" attributes="0"/>
+                      <Component id="jLabel11" min="-2" pref="117" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Component id="jLabel12" min="-2" pref="470" max="-2" attributes="0"/>
-                      <EmptySpace pref="816" max="32767" attributes="0"/>
+                      <EmptySpace pref="461" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -265,9 +296,14 @@
                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="190" pref="190" max="-2" attributes="0"/>
+                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="187" pref="187" max="-2" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -320,6 +356,14 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JLabel" name="jLabel13">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Light" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="[######      ] 600/100HP"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Component class="javax.swing.JLabel" name="Displaypontosdisponiveis">
@@ -375,6 +419,36 @@
           <Color blue="33" green="0" red="cc" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Necess&#xe1;rio n&#xed;vel 10"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="DisplayMPPOTION">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/mp pote.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value=" 3000"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="DisplayMPPOTIONMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="DisplayHPPOTION">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/hp pote.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value=" 3000"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="DisplayHPPOTIONMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="DisplayHPPOTION2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/hp pote.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value=" 3000"/>
       </Properties>
     </Component>
   </SubComponents>

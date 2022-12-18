@@ -5,9 +5,8 @@ public class Potions {
 	static Scanner scan = new Scanner(System.in);
 	static String op;
 	
-	public static void perguntaUsarHP(Personagem p) {
-		System.out.println("Deseja usar poção de HP?\n1-Sim\n2-Não");		//essa versao que pergunta no console deve ser transformada em botoes
-		op = scan.next();
+	public static void perguntaUsarHP(Personagem p, String op) {
+		//System.out.println("Deseja usar poção de HP?\n1-Sim\n2-Não");		//essa versao que pergunta no console deve ser transformada em botoes
 		switch (op) {
 		case "1":
 			if (p.getHpPocoes() > 0) {
@@ -33,9 +32,8 @@ public class Potions {
 		}
 	}
 	
-	public static void perguntaUsarMP(Personagem p) {
-		System.out.println("Deseja usar poção de MP?\n1-Sim\n2-Não");
-		op = scan.next();
+	public static void perguntaUsarMP(Personagem p, String op) {
+		//System.out.println("Deseja usar poção de MP?\n1-Sim\n2-Não");
 		switch (op) {
 		case "1":
 			if (p.getMpPocoes() > 0) {

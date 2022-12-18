@@ -118,7 +118,11 @@ public class Personagem extends Being{
     }
 
     public void setHP(int HP) {
-        this.HP = HP;
+    	if ((this.HP +HP) > this.HP) {
+    		this.HP = this.HPMaximo;
+    	}else {
+            this.HP = HP;
+    	}
     }
 
     public int getMP() {
@@ -126,7 +130,11 @@ public class Personagem extends Being{
     }
 
     public void setMP(int MP) {
-        this.MP = MP;
+    	if ((this.MP +MP) > this.MP) {
+    		this.MP = this.MPMaximo;
+    	}else {
+            this.MP = MP;
+    	}
     }
 
     public int getAtaqueFisico() {

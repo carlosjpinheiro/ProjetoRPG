@@ -155,6 +155,8 @@ public class Jogo extends javax.swing.JFrame {
     public void atualizaAtributosPersonagem(Personagem p) {
         DisplayHP.setText(p.getHP()+"/"+p.getHPMaximo());
         DisplayMP.setText(p.getMP()+"/"+p.getMPMaximo());
+        DisplayHPPOTION.setText(String.valueOf(p.getHpPocoes()));
+        DisplayMPPOTION.setText(String.valueOf(p.getMpPocoes()));
         DisplayAtackFisico.setText(String.valueOf(p.getAtaqueFisico()));
         DisplayAtackMagico.setText(String.valueOf(p.getAtaqueMagico()));
         DisplayDefasa.setText(String.valueOf(p.getDefesa()));
@@ -232,6 +234,7 @@ public class Jogo extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel13 = new javax.swing.JLabel();
         Displaypontosdisponiveis = new javax.swing.JLabel();
         btnHabilidade1 = new javax.swing.JButton();
         btnHabilidade2 = new javax.swing.JButton();
@@ -239,6 +242,9 @@ public class Jogo extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         necessarionv2 = new javax.swing.JLabel();
         necessarionv10 = new javax.swing.JLabel();
+        DisplayMPPOTION = new javax.swing.JLabel();
+        DisplayHPPOTION = new javax.swing.JLabel();
+        DisplayHPPOTION2 = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -296,7 +302,7 @@ public class Jogo extends javax.swing.JFrame {
         jLabel10.setText("[######      ] 600/100HP");
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ORC.png"))); // NOI18N
-        jLabel11.setText("");
+        jLabel11.setText("jLabel11");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
         jLabel12.setText("ORC FURIOSO NIVEL 97");
@@ -306,23 +312,29 @@ public class Jogo extends javax.swing.JFrame {
         jTextArea1.setText("Você atacou o ORC FURIOSO com uma espadada\nVocê recebeu um ataque, 120 de HP foram descontados\nVocê subiu de nível.");
         jScrollPane1.setViewportView(jTextArea1);
 
+        jLabel13.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
+        jLabel13.setText("[######      ] 600/100HP");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(jScrollPane1)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(16, 16, 16)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(816, Short.MAX_VALUE)))
+                    .addContainerGap(461, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -331,9 +343,13 @@ public class Jogo extends javax.swing.JFrame {
                 .addComponent(jLabel11)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(22, 22, 22)
                 .addComponent(jScrollPane1)
-                .addGap(22, 22, 22))
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(190, 190, 190)
+                .addComponent(jLabel13)
+                .addGap(187, 187, 187))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(16, 16, 16)
@@ -379,6 +395,25 @@ public class Jogo extends javax.swing.JFrame {
         necessarionv10.setForeground(new java.awt.Color(204, 0, 51));
         necessarionv10.setText("Necessário nível 10");
 
+        DisplayMPPOTION.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/mp pote.png"))); // NOI18N
+        DisplayMPPOTION.setText(" 3000");
+        DisplayMPPOTION.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DisplayMPPOTIONMouseClicked(evt);
+            }
+        });
+
+        DisplayHPPOTION.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hp pote.png"))); // NOI18N
+        DisplayHPPOTION.setText(" 3000");
+        DisplayHPPOTION.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DisplayHPPOTIONMouseClicked(evt);
+            }
+        });
+
+        DisplayHPPOTION2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hp pote.png"))); // NOI18N
+        DisplayHPPOTION2.setText(" 3000");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -386,42 +421,50 @@ public class Jogo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(DisplayMP, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
-                                        .addComponent(DisplayAtackFisico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(DisplayAtackMagico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(DisplayDefasa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(DisplayHP))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Displaypontosdisponiveis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(DisplayDestreza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(DisplayForca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addComponent(DisplayInteligencia, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                    .addComponent(btnHabilidade3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(btnHabilidade2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(btnHabilidade1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(necessarionv2)
-                                                    .addComponent(necessarionv10))))
-                                        .addGap(0, 0, Short.MAX_VALUE))))
-                            .addComponent(DisplayNickXP, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(86, 86, 86)))
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(DisplayMP, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+                                    .addComponent(DisplayAtackFisico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(DisplayAtackMagico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(DisplayDefasa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(DisplayHP))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Displaypontosdisponiveis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(btnHabilidade3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(btnHabilidade2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(btnHabilidade1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(necessarionv2)
+                                                .addComponent(necessarionv10)))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(DisplayInteligencia, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(DisplayDestreza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(DisplayForca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                            .addGap(35, 35, 35)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(DisplayMPPOTION)
+                                                .addComponent(DisplayHPPOTION))))
+                                    .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(DisplayNickXP, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(28, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(745, 745, 745)
+                    .addComponent(DisplayHPPOTION2)
+                    .addContainerGap(38, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -433,7 +476,7 @@ public class Jogo extends javax.swing.JFrame {
                         .addComponent(DisplayNickXP)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(DisplayHP)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(DisplayMP)
@@ -446,9 +489,15 @@ public class Jogo extends javax.swing.JFrame {
                                 .addGap(28, 28, 28))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(30, 30, 30)
-                                .addComponent(DisplayForca)
-                                .addGap(10, 10, 10)
-                                .addComponent(DisplayInteligencia)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(DisplayForca)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(DisplayInteligencia))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(DisplayHPPOTION)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(DisplayMPPOTION)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(DisplayDestreza)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -469,6 +518,11 @@ public class Jogo extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
                                         .addComponent(jButton1))))))))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(113, 113, 113)
+                    .addComponent(DisplayHPPOTION2)
+                    .addContainerGap(261, Short.MAX_VALUE)))
         );
 
         pack();
@@ -530,6 +584,20 @@ public class Jogo extends javax.swing.JFrame {
         atacarAdversario(3);
     }//GEN-LAST:event_btnHabilidade3ActionPerformed
 
+    private void DisplayHPPOTIONMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DisplayHPPOTIONMouseClicked
+    	if (p.getHpPocoes() > 0 && p.getHP() < p.getHPMaximo()) {
+    		Potions.perguntaUsarHP(p, "1");
+    		atualizaAtributosPersonagem(p);
+    	}
+    }
+
+    private void DisplayMPPOTIONMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DisplayMPPOTIONMouseClicked
+    	if (p.getMpPocoes() > 0 && p.getMP() < p.getMPMaximo()) {
+    		Potions.perguntaUsarMP(p, "1");
+    		atualizaAtributosPersonagem(p);
+    	}
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -576,8 +644,11 @@ public class Jogo extends javax.swing.JFrame {
     private javax.swing.JLabel DisplayDestreza;
     private javax.swing.JLabel DisplayForca;
     private javax.swing.JLabel DisplayHP;
+    private javax.swing.JLabel DisplayHPPOTION;
+    private javax.swing.JLabel DisplayHPPOTION2;
     private javax.swing.JLabel DisplayInteligencia;
     private javax.swing.JLabel DisplayMP;
+    private javax.swing.JLabel DisplayMPPOTION;
     private javax.swing.JLabel DisplayNickXP;
     private javax.swing.JLabel Displaypontosdisponiveis;
     private javax.swing.JButton btnHabilidade1;
@@ -588,6 +659,7 @@ public class Jogo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private static javax.swing.JTextArea jTextArea1;
