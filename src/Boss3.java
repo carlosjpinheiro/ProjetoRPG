@@ -19,9 +19,9 @@ public class Boss3 extends Bosses{
         super();
         double fatorCrescimento = nivel * 10;
         this.setNivel(nivel);
-        this.setHP(300+(int)Math.round((300 * fatorCrescimento))/100);
-        this.setAtaque(25+(int)Math.round((25*fatorCrescimento))/100);
-        this.setDefesa(5+(int)Math.round((5*fatorCrescimento))/100);
+        this.setHP(300+(int)Math.round((100 * fatorCrescimento))/100);
+        this.setAtaque(25+(int)Math.round((10*fatorCrescimento))/100);
+        this.setDefesa(5+(int)Math.round((2*fatorCrescimento))/100);
         this.setNomeHabilidade1("Absorção de Aura");
         this.setNomeHabilidade2("O Levantar dos Mortos");
         this.setTaxaDanoHabilidade1(1.7);

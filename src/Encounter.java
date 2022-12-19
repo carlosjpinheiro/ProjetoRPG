@@ -27,19 +27,19 @@ public class Encounter {
 			if (counter > 0 && counter % 5 == 0) {
 				switch (count) {
 				case 1:
-					GameObjects.inimigo = new Boss1(p.getNivel());
+					GameObjects.inimigo = new Boss1(p.getNivel()-1);
 					Game.imprimeMensagem("Você encontrou o chefão " + GameObjects.inimigo.getnome() + "!");
 					count++;
 					break;
 
 				case 2:
-					GameObjects.inimigo = new Boss2(p.getNivel());
+					GameObjects.inimigo = new Boss2(p.getNivel()-1);
 					Game.imprimeMensagem("Você encontrou o chefão " + GameObjects.inimigo.getnome() + "!");
 					count++;
 					break;
 
 				case 3:
-					GameObjects.inimigo = new Boss3(p.getNivel());
+					GameObjects.inimigo = new Boss3(p.getNivel()-1);
 					Game.imprimeMensagem("Você encontrou o chefão " + GameObjects.inimigo.getnome() + "!");
 					count = 1;
 					break;

@@ -18,9 +18,9 @@ public class Boss2 extends Bosses{
         super();
         double fatorCrescimento = nivel * 10;
         this.setNivel(nivel);
-        this.setHP(170+(int)Math.round((170 * fatorCrescimento))/100);
-        this.setAtaque(20+(int)Math.round((20*fatorCrescimento))/100);
-        this.setDefesa(5+(int)Math.round((5*fatorCrescimento))/100);
+        this.setHP(170+(int)Math.round((100 * fatorCrescimento))/100);
+        this.setAtaque(20+(int)Math.round((10*fatorCrescimento))/100);
+        this.setDefesa(5+(int)Math.round((2*fatorCrescimento))/100);
         this.setNomeHabilidade1("Grito Estridente");
         this.setNomeHabilidade2("Invocação do Mal");
         this.setTaxaDanoHabilidade1(1.5);

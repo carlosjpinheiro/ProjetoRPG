@@ -18,7 +18,7 @@ public class Enemy1 extends Enemies{
 		double fatorCrescimento = nivel * 10;
 		this.setHP(50+(int)Math.round((50 * fatorCrescimento))/100);
 		this.setNivel(nivel);
-		this.setAtaque(20+(int)Math.round((20*fatorCrescimento))/100);
+		this.setAtaque(18+(int)Math.round((20*fatorCrescimento))/100);
 		this.setDefesa(5+(int)Math.round((5*fatorCrescimento))/100);
 		this.setnome("Bandido");
 		this.setNomeHabilidade1("Roubo de vida");
