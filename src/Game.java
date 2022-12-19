@@ -296,7 +296,7 @@ public class Game extends javax.swing.JFrame {
         jLabel10.setText("[######      ] 600/100HP");
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ORC.png"))); // NOI18N
-        jLabel11.setText("jLabel11");
+        jLabel11.setText("");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
         jLabel12.setText("ORC FURIOSO NIVEL 97");
