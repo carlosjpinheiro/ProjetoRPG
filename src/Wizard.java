@@ -1,5 +1,5 @@
-public class Mago extends Personagem {
-    public Mago(String nome) {
+public class Wizard extends Character {
+    public Wizard(String nome) {
         setNome(nome);
         setHPMaximo(170);
         setHP(170);
