@@ -95,18 +95,22 @@ public class SelecaoPersonagem extends javax.swing.JFrame {
 
     private void SelGuerreioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SelGuerreioMouseClicked
         iniciaJogo(1);
+        setVisible(false);
     }//GEN-LAST:event_SelGuerreioMouseClicked
 
     private void SelMagoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SelMagoMouseClicked
         iniciaJogo(2);
+        setVisible(false);
     }//GEN-LAST:event_SelMagoMouseClicked
 
     private void SelArqueiroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SelArqueiroMouseClicked
         iniciaJogo(3);
+        setVisible(false);
     }//GEN-LAST:event_SelArqueiroMouseClicked
 
     private void SelAssasinoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SelAssasinoMouseClicked
         iniciaJogo(4);
+        setVisible(false);
     }//GEN-LAST:event_SelAssasinoMouseClicked
 
     

@@ -39,6 +39,7 @@ public class Jogo extends javax.swing.JFrame {
         int dano = p.calculaDano(habilidade);
         p.addXP(dano);
         ObjetosJogo.inimigo.diminuiHP(dano);
+        Jogo.imprimeMensagem("Você ataca " + ObjetosJogo.inimigo.getnome() + " e o deixa com " + ObjetosJogo.inimigo.getHP() + " de HP");
         rodaEncontros(p);
         atualizaAtributosInimigo(ObjetosJogo.inimigo);
        // JOptionPane.showMessageDialog(null, "dano: " + dano);// pode tirar é somente para debug
@@ -58,16 +59,14 @@ public class Jogo extends javax.swing.JFrame {
     }
 
     public void rodaEncontros(Personagem p) {		//controla fluxo do jogo, chamando encontros , que chamam rodadas e turnos
-    if (p.getHP() > 0) {
-    		//if (Encounter.counter > 1 && p.getHpPocoes() > 0) Potions.perguntaUsarHP(p);
-    	if(Encounter.counter > ultimaMensagemEncontro) {
-    		imprimeMensagem(selecionaFrase());
-    		imprimeMensagem("Você encontra o inimigo número "+Encounter.counter);
-    		ultimaMensagemEncontro = Encounter.counter;
-    	}
-			
-			
-				Encounter.encounter(p);
+	    if (p.getHP() > 0) {
+	    		//if (Encounter.counter > 1 && p.getHpPocoes() > 0) Potions.perguntaUsarHP(p);
+	    	if(Encounter.counter > ultimaMensagemEncontro) {
+	    		imprimeMensagem(selecionaFrase());
+	    		imprimeMensagem("Você encontra o inimigo número "+Encounter.counter);
+	    		ultimaMensagemEncontro = Encounter.counter;
+	    	}
+			Encounter.encounter(p);
 			if (Utilities.chance(20)) {
 				if (Utilities.chance(50)) {
 					p.setHpPocoes(p.getHpPocoes()+1);
@@ -79,10 +78,10 @@ public class Jogo extends javax.swing.JFrame {
 					imprimeMensagem("Uma poção de MP cai de seu inimigo e você a recolhe!");
 				}
 			}
-    	}else {
-    		imprimeMensagem("Você morreu!");
-    		ObjetosJogo.finalizaJogo();
-    	}
+		}else {
+			imprimeMensagem("Você morreu!");
+			ObjetosJogo.finalizaJogo();
+		}
     }
     
     
