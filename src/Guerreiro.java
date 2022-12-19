@@ -7,7 +7,7 @@ public class Guerreiro extends Personagem {
         setMP(70);
         setAtaqueFisico(25);
         setAtaqueMagico(1);
-        setDefesa(20);
+        setDefesa(15);
         setNivel(1);
         setXP(0);
         setPontosForca(10);

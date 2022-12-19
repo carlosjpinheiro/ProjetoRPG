@@ -262,7 +262,7 @@ public class Jogo extends javax.swing.JFrame {
         DisplayAtackMagico.setText("142");
 
         DisplayNickXP.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
-        DisplayNickXP.setText("LUCAS GUERREIRO NIVEL 90 (273/5400)XP");
+        DisplayNickXP.setText("*NAME* GUERREIRO NIVEL 90 (273/5400)XP");
 
         DisplayHP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/HP.png"))); // NOI18N
         DisplayHP.setText(" 0/100000");

@@ -10,12 +10,5 @@ public class MainRPG {
 		tela.setVisible(true);
 		
 		
-		//Jogo j = new Jogo();
-		//Personagem p = new Arqueiro("Zézinho");
-		
-		
-		//j.rodaEncontros(p);
-//		j.selecionaFrase();
-		
 	}
 }

@@ -7,7 +7,8 @@ public class Arqueiro extends Personagem {
         setMP(80);
         setAtaqueFisico(10);
         setAtaqueMagico(25);
-        setDefesa(0);
+        setDefesa(10);
+        setNivel(1);
         setXP(0);
         setPontosForca(4);
         setPontosInteligencia(4);
