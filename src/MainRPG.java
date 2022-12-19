@@ -6,16 +6,9 @@ public class MainRPG {
 		// TODO Auto-generated method stub
 		
 		Scanner scan = new Scanner(System.in);
-		SelecaoPersonagem tela = new SelecaoPersonagem();
+		CharacterSelection tela = new CharacterSelection();
 		tela.setVisible(true);
 		
-		
-		//Jogo j = new Jogo();
-		//Personagem p = new Arqueiro("Zézinho");
-		
-		
-		//j.rodaEncontros(p);
-//		j.selecionaFrase();
 		
 	}
 }

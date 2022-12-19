@@ -5,42 +5,42 @@ public class Encounter {
 	public static int count = 1;
 	private static int rando;
 
-	public static void encounter(Personagem p) {
-		if (ObjetosJogo.inimigo != null) {
-			if (ObjetosJogo.inimigo.HP <= 0) {
-				ObjetosJogo.inimigo = null;
+	public static void encounter(Character p) {
+		if (GameObjects.inimigo != null) {
+			if (GameObjects.inimigo.HP <= 0) {
+				GameObjects.inimigo = null;
 				if (Utilities.chance(20)) {
 					if (Utilities.chance(50)) {
 						p.setHpPocoes(p.getHpPocoes()+1);
 						//System.out.println("Uma poção de HP cai de seu inimigo e você a recolhe!");
-						Jogo.imprimeMensagem("Uma poção de HP cai de seu inimigo e você a recolhe!");
+						Game.imprimeMensagem("Uma poção de HP cai de seu inimigo e você a recolhe!");
 					} else {
 						p.setMpPocoes(p.getMpPocoes() + 1);
 						//System.out.println("Uma poção de MP cai de seu inimigo e você a recolhe!");
-						Jogo.imprimeMensagem("Uma poção de MP cai de seu inimigo e você a recolhe!");
+						Game.imprimeMensagem("Uma poção de MP cai de seu inimigo e você a recolhe!");
 					}
 				}
 				counter++;
 			}
 		}
-		if (ObjetosJogo.inimigo == null) {
+		if (GameObjects.inimigo == null) {
 			if (counter > 0 && counter % 5 == 0) {
 				switch (count) {
 				case 1:
-					ObjetosJogo.inimigo = new Boss1();
-					Jogo.imprimeMensagem("Você encontrou o chefão " + ObjetosJogo.inimigo.getnome() + "!");
+					GameObjects.inimigo = new Boss1();
+					Game.imprimeMensagem("Você encontrou o chefão " + GameObjects.inimigo.getnome() + "!");
 					count++;
 					break;
 
 				case 2:
-					ObjetosJogo.inimigo = new Boss2();
-					Jogo.imprimeMensagem("Você encontrou o chefão " + ObjetosJogo.inimigo.getnome() + "!");
+					GameObjects.inimigo = new Boss2();
+					Game.imprimeMensagem("Você encontrou o chefão " + GameObjects.inimigo.getnome() + "!");
 					count++;
 					break;
 
 				case 3:
-					ObjetosJogo.inimigo = new Boss3();
-					Jogo.imprimeMensagem("Você encontrou o chefão " + ObjetosJogo.inimigo.getnome() + "!");
+					GameObjects.inimigo = new Boss3();
+					Game.imprimeMensagem("Você encontrou o chefão " + GameObjects.inimigo.getnome() + "!");
 					count = 1;
 					break;
 				}
@@ -48,22 +48,22 @@ public class Encounter {
 			} else {
 				rando = (int) (Math.random() * 100);
 				if (rando < 25) {
-					ObjetosJogo.inimigo = new Enemy1(p.getNivel());
-					Jogo.imprimeMensagem("Voce encontrou um " + ObjetosJogo.inimigo.getnome() + "!");
+					GameObjects.inimigo = new Enemy1(p.getNivel());
+					Game.imprimeMensagem("Voce encontrou um " + GameObjects.inimigo.getnome() + "!");
 				} else if (rando < 50) {
-					ObjetosJogo.inimigo = new Enemy2(p.getNivel());
-					Jogo.imprimeMensagem("Voce encontrou um " + ObjetosJogo.inimigo.getnome() + "!");
+					GameObjects.inimigo = new Enemy2(p.getNivel());
+					Game.imprimeMensagem("Voce encontrou um " + GameObjects.inimigo.getnome() + "!");
 				} else if (rando < 75) {
-					ObjetosJogo.inimigo = new Enemy3(p.getNivel());
-					Jogo.imprimeMensagem("Voce encontrou um " + ObjetosJogo.inimigo.getnome() + "!");
+					GameObjects.inimigo = new Enemy3(p.getNivel());
+					Game.imprimeMensagem("Voce encontrou um " + GameObjects.inimigo.getnome() + "!");
 				} else {
-					ObjetosJogo.inimigo = new Enemy4(p.getNivel());
-					Jogo.imprimeMensagem("Voce encontrou um " + ObjetosJogo.inimigo.getnome() + "!");
+					GameObjects.inimigo = new Enemy4(p.getNivel());
+					Game.imprimeMensagem("Voce encontrou um " + GameObjects.inimigo.getnome() + "!");
 				}
 
 			}
 		}
-		Round.round(p, ObjetosJogo.inimigo);
+		Round.round(p, GameObjects.inimigo);
 	}
 
 }

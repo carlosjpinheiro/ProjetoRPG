@@ -3,11 +3,14 @@ import java.awt.Color;
 import javax.swing.JOptionPane;
 
 
-public class Jogo extends javax.swing.JFrame {
+public class Game extends javax.swing.JFrame {
 
+	public static String bufferText = "";
+	
 	public static void imprimeMensagem(String texto) {
-		jTextArea1.setText(texto+"\n"+jTextArea1.getText());
-		jTextArea1.setCaretPosition(0);
+		jTextArea1.setText(bufferText+"\n-----------------\n"+texto+"\n");
+		bufferText = bufferText + "\n"+texto;
+		jTextArea1.setCaretPosition(jTextArea1.getDocument().getLength());
 	}
 	public static void LimpaMensagem() {
 		jTextArea1.setText("");
@@ -15,10 +18,10 @@ public class Jogo extends javax.swing.JFrame {
 
     public int classe = 0;
     public int ultimaMensagemEncontro = 0;
-    public Personagem p;
+    public Character p;
     
     
-	public String fraseInicial = "Você acordou em uma clareira no meio do mato, olha em volta e não vê nada familiar. Não conhece aquele lugar e também não lembra de muita coisa, apenas que estava passeando com sua esposa Magnólia na beira-rio. Um sujeito estranho vem em sua direção:\nEstava bom o sono? Vi que recém chegou aqui, está perdidinho... Não está sentindo falta de nada? Hahahaha";
+	public String fraseInicial = "Você acordou de um sonho em que parecia com um personagem estranho em uma clareira no meio do mato, olha em volta e não vê nada familiar. Não conhece aquele lugar e também não lembra de muita coisa, apenas que estava passeando com sua esposa Magnólia na beira-rio. Um sujeito estranho vem em sua direção:\nEstava bom o sono? Vi que recém chegou aqui, está perdidinho... Não está sentindo falta de nada? Hahahaha";
     public String[] frasesEncontros = {
     		"Algo se mexeu atrás daquele arbusto. Magnólia! É você?!?",
     		"Você achou um bote que usa para cruzar um pequeno lago, só que ao chegar lá ouve um barulho estranho mais ao fundo, seria isso um Goblin?",
@@ -38,10 +41,10 @@ public class Jogo extends javax.swing.JFrame {
     public void atacarAdversario(int habilidade){
         int dano = p.calculaDano(habilidade);
         p.addXP(dano);
-        ObjetosJogo.inimigo.diminuiHP(dano);
-        Jogo.imprimeMensagem("Você ataca " + ObjetosJogo.inimigo.getnome() + " e o deixa com " + ObjetosJogo.inimigo.getHP() + " de HP");
+        GameObjects.inimigo.diminuiHP(dano);
+        Game.imprimeMensagem("Você ataca " + GameObjects.inimigo.getnome() + " e o deixa com " + GameObjects.inimigo.getHP() + " de HP");
         rodaEncontros(p);
-        atualizaAtributosInimigo(ObjetosJogo.inimigo);
+        atualizaAtributosInimigo(GameObjects.inimigo);
        // JOptionPane.showMessageDialog(null, "dano: " + dano);// pode tirar é somente para debug
         //p.addXP(dano); adionar a quantidade de dano como xp?
         //inimigo.diminuiHP(dano) atribuir dano ao inimigo (implementar)
@@ -49,7 +52,7 @@ public class Jogo extends javax.swing.JFrame {
         atualizaAtributosPersonagem(p);
     }
     
-    private void setPersonagem(Personagem p) {
+    private void setPersonagem(Character p) {
         this.p = p;
     }
 
@@ -58,7 +61,7 @@ public class Jogo extends javax.swing.JFrame {
     	return frasesEncontros[(int)(Math.random()*frasesEncontros.length)];
     }
 
-    public void rodaEncontros(Personagem p) {		//controla fluxo do jogo, chamando encontros , que chamam rodadas e turnos
+    public void rodaEncontros(Character p) {		//controla fluxo do jogo, chamando encontros , que chamam rodadas e turnos
 	    if (p.getHP() > 0) {
 	    		//if (Encounter.counter > 1 && p.getHpPocoes() > 0) Potions.perguntaUsarHP(p);
 	    	if(Encounter.counter > ultimaMensagemEncontro) {
@@ -70,38 +73,39 @@ public class Jogo extends javax.swing.JFrame {
 			
 		}else {
 			imprimeMensagem("Você morreu!");
-			ObjetosJogo.finalizaJogo();
+			GameObjects.finalizaJogo();
 		}
     }
     
     
     public void criaPersonagem(int i, String nome) {
         classe = i;
+        System.out.println();
         LimpaMensagem();
         imprimeMensagem(fraseInicial);
         switch (i) {
             case 1:
-                setPersonagem(new Guerreiro(nome));
+                setPersonagem(new Warrior(nome));
                 break;
             case 2:
-                setPersonagem(new Mago(nome));
+                setPersonagem(new Wizard(nome));
                 break;
             case 3:
-                setPersonagem(new Arqueiro(nome));
+                setPersonagem(new Archer(nome));
                 break;
             case 4:
-                setPersonagem(new Assassino(nome));
+                setPersonagem(new Assassin(nome));
                 break;
             default:
                 break;
         }
         atualizaAtributosPersonagem(p);
         rodaEncontros(p);
-        atualizaAtributosInimigo(ObjetosJogo.inimigo);
+        atualizaAtributosInimigo(GameObjects.inimigo);
         
 
     }
-
+    
     public String getNomeClasse(int classe) {
         switch (classe) {
             case 1:
@@ -141,7 +145,7 @@ public class Jogo extends javax.swing.JFrame {
     	jLabel10.setText(e.HP+" HP");
     	jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource(e.getimagem())));
     }
-    public void atualizaAtributosPersonagem(Personagem p) {
+    public void atualizaAtributosPersonagem(Character p) {
         DisplayHP.setText(p.getHP()+"/"+p.getHPMaximo());
         DisplayMP.setText(p.getMP()+"/"+p.getMPMaximo());
         DisplayHPPOTION.setText(String.valueOf(p.getHpPocoes()));
@@ -187,7 +191,7 @@ public class Jogo extends javax.swing.JFrame {
     /**
      * Creates new form jogo
      */
-    public Jogo() {
+    public Game() {
         initComponents();
          Color minhaCor = new Color(159, 213, 236);
         Color CorPanel = new Color(157, 183, 250);
@@ -235,6 +239,7 @@ public class Jogo extends javax.swing.JFrame {
         DisplayHPPOTION = new javax.swing.JLabel();
         DisplayHPPOTION2 = new javax.swing.JLabel();
 
+        jButton1.setVisible(false);
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -585,45 +590,6 @@ public class Jogo extends javax.swing.JFrame {
     		Potions.perguntaUsarMP(p, "1");
     		atualizaAtributosPersonagem(p);
     	}
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
-        // (optional) ">
-        /*
-         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
-         * look and feel.
-         * For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Jogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        // </editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Jogo().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

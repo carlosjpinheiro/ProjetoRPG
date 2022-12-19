@@ -1,7 +1,6 @@
+import javax.swing.JOptionPane;
 
-
-
-public class Personagem extends Being{
+public class Character extends Being{
     private int HPMaximo;    
     private int MPMaximo;    
     private int AtaqueFisico;
@@ -75,7 +74,8 @@ public class Personagem extends Being{
     }
 
     public void aumentaNivel() {
-        Nivel++;
+    	JOptionPane.showMessageDialog(null, "Você ganhou um nível!");
+    	Nivel++;
         PontosNaoAplicados += 5;
         XPNecessario = (int)(XPNecessario * 1.4);
     }

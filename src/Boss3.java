@@ -3,6 +3,7 @@ public class Boss3 extends Bosses{
 
     public Boss3() {
         super();
+        this.setNivel(1);
         this.setHP(300);
         this.setAtaque(25);
         this.setDefesa(5);
