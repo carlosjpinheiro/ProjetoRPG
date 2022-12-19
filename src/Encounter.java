@@ -47,20 +47,22 @@ public class Encounter {
 
 			} else {
 				rando = (int) (Math.random() * 100);
-				if (rando < 25) {
+				if (rando < 20) {
 					GameObjects.inimigo = new Enemy1(p.getNivel());
 					Game.imprimeMensagem("Voce encontrou um " + GameObjects.inimigo.getnome() + "!");
-				} else if (rando < 50) {
+				} else if (rando < 40) {
 					GameObjects.inimigo = new Enemy2(p.getNivel());
 					Game.imprimeMensagem("Voce encontrou um " + GameObjects.inimigo.getnome() + "!");
-				} else if (rando < 75) {
+				} else if (rando < 60) {
 					GameObjects.inimigo = new Enemy3(p.getNivel());
 					Game.imprimeMensagem("Voce encontrou um " + GameObjects.inimigo.getnome() + "!");
-				} else {
+				} else if (rando < 80){
 					GameObjects.inimigo = new Enemy4(p.getNivel());
 					Game.imprimeMensagem("Voce encontrou um " + GameObjects.inimigo.getnome() + "!");
+				} else {
+					GameObjects.inimigo = new Enemy5(p.getNivel());
+					Game.imprimeMensagem("Voce encontrou um " + GameObjects.inimigo.getnome() + "!");
 				}
-
 			}
 		}
 		Round.round(p, GameObjects.inimigo);
