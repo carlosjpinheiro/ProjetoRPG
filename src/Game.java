@@ -42,7 +42,11 @@ public class Game extends javax.swing.JFrame {
         int dano = p.calculaDano(habilidade);
         p.addXP(dano);
         GameObjects.inimigo.diminuiHP(dano);
-        Game.imprimeMensagem("Você ataca " + GameObjects.inimigo.getnome() + " e o deixa com " + GameObjects.inimigo.getHP() + " de HP");
+        if (GameObjects.inimigo.getHP() <= 0) {
+			Game.imprimeMensagem("Você ataca " + GameObjects.inimigo.getnome() + " e o deixa com 0 de HP");
+		} else {
+			Game.imprimeMensagem("Você ataca " + GameObjects.inimigo.getnome() + " e o deixa com " + GameObjects.inimigo.getHP() + " de HP");
+		}
         rodaEncontros(p);
         atualizaAtributosInimigo(GameObjects.inimigo);
        // JOptionPane.showMessageDialog(null, "dano: " + dano);// pode tirar é somente para debug
