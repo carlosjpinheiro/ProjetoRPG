@@ -114,7 +114,12 @@ public class Character extends Being{
     }
 
     public int getHP() {
-        return HP;
+    	if (HP > 0) {
+    		return HP;
+    	}
+    	else {
+    		return 0;
+    	}
     }
 
     public void setHP(int HP) {

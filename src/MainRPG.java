@@ -6,6 +6,5 @@ public class MainRPG {
 		CharacterSelection tela = new CharacterSelection();
 		tela.setVisible(true);
 		
-		
 	}
 }
