@@ -9,6 +9,17 @@ public class Encounter {
 		if (ObjetosJogo.inimigo != null) {
 			if (ObjetosJogo.inimigo.HP <= 0) {
 				ObjetosJogo.inimigo = null;
+				if (Utilities.chance(20)) {
+					if (Utilities.chance(50)) {
+						p.setHpPocoes(p.getHpPocoes()+1);
+						//System.out.println("Uma poção de HP cai de seu inimigo e você a recolhe!");
+						Jogo.imprimeMensagem("Uma poção de HP cai de seu inimigo e você a recolhe!");
+					} else {
+						p.setMpPocoes(p.getMpPocoes() + 1);
+						//System.out.println("Uma poção de MP cai de seu inimigo e você a recolhe!");
+						Jogo.imprimeMensagem("Uma poção de MP cai de seu inimigo e você a recolhe!");
+					}
+				}
 				counter++;
 			}
 		}

@@ -185,31 +185,39 @@ public class Turn {
 		default:
 			break;
 		}
-}
-
-	public static void turnBot(Bosses atacante, Personagem defensor) {
-	if (Utilities.chance(20)) {			//20% de chance do inimigo dar o ataque especial e 80% de atck normal
-		defensor.diminuiHP(atacante.calculaDano(2));
-		if (defensor.getHP() <= 0) {
-			//System.out.println(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
-			Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
-		} else {
-			//System.out.println(atacante.getnome()+" lhe ataca com "+atacante.getNomeHabilidade1()+" o deixando com "+defensor.getHP()+" de HP");				
-			Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca com "+atacante.getNomeHabilidade1()+" o deixando com "+defensor.getHP()+" de HP");
-		}
-	} else {
-		defensor.diminuiHP(atacante.calculaDano(1));
-		if (defensor.getHP() <= 0) {
-			//System.out.println(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
-			Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
-		} else {
-			//System.out.println(atacante.getnome()+" lhe ataca, o deixando com "+defensor.getHP()+" de HP");		
-			Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca, o deixando com "+defensor.getHP()+" de HP");
-		}
-	}
-	
 }*/
 
+	public static void turnBoss(Being atacante, Personagem defensor) {
+		if (Utilities.chance(10)) {							//define o tipo de ataque do boss conforme porcentagens
+			defensor.diminuiHP(atacante.calculaDano(3));
+			if (defensor.getHP() <= 0) {
+				//System.out.println(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
+				Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
+			} else {
+				//System.out.println(atacante.getnome()+" lhe ataca com "+atacante.getNomeHabilidade2()+" o deixando com "+defensor.getHP()+" de HP");				
+				Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca com "+atacante.getNomeHabilidade2()+" o deixando com "+defensor.getHP()+" de HP");
+			}
+		} else if (Utilities.chance(20)){
+			defensor.diminuiHP(atacante.calculaDano(2));
+			if (defensor.getHP() <= 0) {
+				//System.out.println(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
+				Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
+			} else {
+				//System.out.println(atacante.getnome()+" lhe ataca com "+atacante.getNomeHabilidade1()+" o deixando com "+defensor.getHP()+" de HP");				
+				Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca com "+atacante.getNomeHabilidade1()+" o deixando com "+defensor.getHP()+" de HP");
+			}
+		} else {
+			defensor.diminuiHP(atacante.calculaDano(1));
+			if (defensor.getHP() <= 0) {
+				//System.out.println(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
+				Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca, o deixando com 0 HP");
+			} else {
+				//System.out.println(atacante.getnome()+" lhe ataca, o deixando com "+defensor.getHP()+" de HP");
+				Jogo.imprimeMensagem(atacante.getnome()+" lhe ataca, o deixando com "+defensor.getHP()+" de HP");
+			}
+		}
+		
+	}
 	
 	
 }

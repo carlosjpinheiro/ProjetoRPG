@@ -67,17 +67,7 @@ public class Jogo extends javax.swing.JFrame {
 	    		ultimaMensagemEncontro = Encounter.counter;
 	    	}
 			Encounter.encounter(p);
-			if (Utilities.chance(20)) {
-				if (Utilities.chance(50)) {
-					p.setHpPocoes(p.getHpPocoes()+1);
-					//System.out.println("Uma poção de HP cai de seu inimigo e você a recolhe!");
-					imprimeMensagem("Uma poção de HP cai de seu inimigo e você a recolhe!");
-				} else {
-					p.setMpPocoes(p.getMpPocoes() + 1);
-					//System.out.println("Uma poção de MP cai de seu inimigo e você a recolhe!");
-					imprimeMensagem("Uma poção de MP cai de seu inimigo e você a recolhe!");
-				}
-			}
+			
 		}else {
 			imprimeMensagem("Você morreu!");
 			ObjetosJogo.finalizaJogo();

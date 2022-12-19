@@ -4,6 +4,8 @@ public abstract class Being {
 	public int HP,MP,Nivel;
 	public String nome;
 	private String nomeHabilidade1;
+	private String nomeHabilidade2;
+	public boolean isBoss = false;
 		
 	public abstract void diminuiHP(int dano);
 	
@@ -59,5 +61,23 @@ public abstract class Being {
 	public void setnome(String nome) {
 		this.nome = nome;
 	}
+
+	public boolean isBoss() {
+		return isBoss;
+	}
+
+	public void setBoss(boolean isBoss) {
+		this.isBoss = isBoss;
+	}
+
+	public String getNomeHabilidade2() {
+		return nomeHabilidade2;
+	}
+
+	public void setNomeHabilidade2(String nomeHabilidade2) {
+		this.nomeHabilidade2 = nomeHabilidade2;
+	}
+	
+	
 	
 }

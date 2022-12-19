@@ -6,8 +6,9 @@ public class Bosses extends Being{
     private double taxaDanoHabilidade2;
     private String nomeHabilidade1;
     private String nomeHabilidade2;
+    public boolean isBoss = true;
 
-     public void diminuiHP(int dano){
+	public void diminuiHP(int dano){
             int danoFinal = (dano - Defesa);
             if (danoFinal > 0){
                HP -= danoFinal;
@@ -87,7 +88,14 @@ public class Bosses extends Being{
         this.nomeHabilidade2 = nomeHabilidade2;
     }
 
-       
+    public boolean isBoss() {
+ 		return isBoss;
+ 	}
 
+ 	public void setBoss(boolean isBoss) {
+ 		this.isBoss = isBoss;
+ 	}    
+ 	
+ 	
     
 }

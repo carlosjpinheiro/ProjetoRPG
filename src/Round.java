@@ -8,7 +8,13 @@ public class Round {
 			//System.out.println("Você matou "+inimigo.getnome()+"!!");
 			//System.out.println("-------------------");
 			Jogo.imprimeMensagem("Você matou "+inimigo.getnome()+"!!");
-		} else Turn.turnBot(inimigo, heroi);
+		} else {
+			if(inimigo.isBoss()) {
+				Turn.turnBoss(inimigo, heroi);
+			} else {
+				Turn.turnBot(inimigo, heroi);				
+			}
+		}
 	}
 	
 
